@@ -1,0 +1,170 @@
+WEBSITE EDITION NOTE — 27 October 2026
+This is the earlier source audit. The college window question recorded below has since been resolved: Class of 2025 attendance by March 2026; four-year attendance is derived approximately from rounded published overall attendance and sector shares. Campus ACS vintage/geocoding remains unresolved. Read the website methods and data dictionary for current interpretation.
+
+SOURCE AUDIT — MASSACHUSETTS PUBLIC HIGH SCHOOL SES PROJECT
+Prepared 5 October 2026
+
+The original Stata validation log completed successfully. The original DTA has
+415 records, 158 variables and unique eight-digit DESE school codes. The supplied
+analysis(1).dta is byte-identical to it. Existing numerical values reconcile with
+the inspected raw sources; this finding does not resolve all population definitions,
+school coverage or historical geographic assignments.
+
+FAFSA CYCLES AND EXACT PROVENANCE
+
+HS_ARCHIVE05312025(1).xls:
+  Columns E/F: 2025–26 aid cycle, processed through May 31, 2025.
+HSARCHIVE01312026.xls:
+  E/F: January 31, 2026, 2026–27 cycle.
+  G/H: January 31, 2025, 2025–26 cycle. No May 2025 snapshot in this file.
+HSARCHIVE05312026 (1)(1).xls:
+  E/F: May 31, 2026, 2026–27 cycle.
+  G/H: May 31, 2025, 2025–26 cycle — exact source of the current DTA counts.
+
+All 381 assigned federal source records match the current DTA's raw submitted and
+completed strings and its MA-only source-row reference. There are 360 exact usable
+completion counts and 21 '<5' suppressed records among those matches. Source row
+numbers refer to the MA-only extract, not the nationwide workbook's Excel row.
+
+The original May 2025 publication matches 369 of the current mapped records. All
+360 exact usable counts are covered; 348 completed counts agree and 12 differ.
+Across 13 schools with a change in either raw count, later historical submitted
+counts total 12 higher and completed counts total 11 higher. The reason for those
+changes is not established here. Call this a later-published historical snapshot,
+not a proven correction. The original archive is retained as a sensitivity source.
+
+ENROLLMENT, LOW INCOME AND DENOMINATOR
+
+The raw enrollment and selected-population headers both explicitly say 2024–25.
+Each has 1,817 school rows plus one State Total row. State totals are excluded from
+the prepared input. All school codes are unique and preserve leading zeroes.
+Complete grade rows sum exactly to reported total enrollment.
+
+Enrollment matches 413/415 original records. Of the original 415, 407 have positive
+grade-12 enrollment, six have zero seniors and two lack a source match. The missing
+two are Lynn's City Arts & Sciences Academy (01630555) and TEAMS Academy (01630625).
+All 412 available low-income, English-learner and SWD percentages match the DTA.
+The selected-population file duplicates the SWD header; the populated latter
+columns M/N are the relevant fields, not the empty first occurrence K/L.
+
+Among 401 schools with both graduation-cohort and grade-12 counts, only 34 counts
+are equal; 285 graduation-cohort counts are larger and 82 are smaller. Preserve
+both denominators. The graduation cohort is not a literal senior-enrollment count.
+
+Four FAFSA cases are screened out of the new provisional senior-based estimate:
+02810580 Springfield Gateway to College at Springfield Technical Community College:
+  11 completions / 8 seniors = 137.5%.
+02810575 Springfield Gateway to College at Holyoke Community College:
+  10 completions / 8 seniors = 125%.
+04890505 Sturgis Charter Public School:
+  Two federal rows under one code; saved campus record versus whole-school coverage
+  is unresolved. Do not automatically add the rows or use one campus as the whole.
+39020900 TEC Connections Academy Commonwealth Virtual School:
+  Multiple federal rows under one code; campus/program coverage is unresolved.
+
+There are 360 raw exact-count/senior estimates and 356 screened provisional estimates
+within the current sample. Exclusion flags are visible; the source records remain.
+No estimate is capped at 100%, no suppressed count is treated as zero, and no
+original proxy is silently substituted for a missing senior-based estimate.
+
+SCHOOL UNIVERSE
+
+The enrollment source contains two additional schools with positive seniors absent
+from the DTA: City on a Hill Charter Public School (04370505; 38 seniors) and
+Springfield Liberty Preparatory Academy (02810560; 1 senior). City on a Hill also
+appears in several graduation, college, AP, plans and MassCore sources. Other
+postsecondary/graduate-plan sources contain Millis TIES, Quabbin New Braintree
+Grade and Seekonk Transitions records outside the DTA. Eligibility requires review.
+Until resolved, describe 415 as the current merged school sample, not a proven
+complete population of every Massachusetts senior-enrolling public school.
+
+The old high_schools_only.xlsx's apparent 417 is worksheet rows, not 417 schools:
+one header plus 416 records with 415 unique codes. Edward M. Kennedy Academy had
+two grade-span rows under the same code. The final data combine that duplicate.
+Recorded grade spans partly came from restoration and do not establish current
+positive senior enrollment by themselves.
+
+OUTCOME YEARS AND INTERPRETATION
+
+Graduation: 2025, All Students, four-year rate; all seven saved fields match for
+401 schools. This is a graduation cohort measure.
+
+College attendance: 2024–25 graduates, All Students, all colleges/universities;
+graduate counts match for 405 and attendance/category fields for 381. The source
+header does not establish the college-enrollment follow-up window. The 24 blank
+attendance observations are missing, not zero.
+
+MassCore: 2024–25, All Students; all three saved fields match for 393 schools.
+Completion percentage refers to graduates.
+
+MCAS: 2025 testing year; all saved subject fields match (ELA 370 schools, math 367,
+science 354). The supplied workbook does not explicitly record grade selection
+or subgroup. 2025 testing is not a Class of 2025 graduation-cohort measure.
+If grade 10 is confirmed, it generally describes the cohort graduating in 2027;
+a Class of 2025 grade-10 comparison would need 2023 testing data. Use the 2025
+measure as school context until those filters are confirmed.
+
+AP participation: 2024–25, All Subjects, All Students; unique exam takers match for
+336 schools, and detailed exam-count fields for 327. This counts exam takers,
+not AP-course enrollment. The precise included grade universe is not documented
+in the supplied header. Do not divide by grade-12 enrollment or graduation cohort.
+An enrollment-based AP-taker rate needs a verified aligned grade population.
+
+AP performance: 2024–25, All Subjects, All Students; exams taken match for 336,
+score categories/percentages for 328. Percent scoring 3–5 uses exams as denominator;
+one student may contribute several exams. It is not percent of all students.
+
+Attendance: 2024–25 end of year, All Students; 413 source matches and 412 numerical
+records. The two uploaded attendance versions are cell-for-cell identical.
+Attendance/chronic absence are whole-school measures; grade spans differ.
+
+SAT: 2024–25, All Students; 366 schools with test counts, 334 with scores.
+Scores describe participating test takers. Grade/cohort selection is not explicit
+in the supplied header, and results are not universal student achievement.
+
+Graduate plans: 2024–25; 405 graduate-plan counts and 393 category percentages
+match. Plans are intentions, not observed college enrollment. The header does
+not separately document a student subgroup selection.
+
+Pathways enrollment: 2025–26; totals/percent/all-student counts match for 215 schools,
+grade-specific fields for 205. These are program-participation counts, not ordinary
+grade enrollment. Keep them separate from the 2024–25 main outcome comparison
+unless obtaining a matching earlier source or explicitly presenting later context.
+
+Across all inspected raw outcome files, there were no numerical disagreements
+with populated corresponding DTA values. Availability differs by outcome because
+source coverage and suppression differ; regression samples must show their N.
+
+ACS CAMPUS-TRACT CONTEXT
+
+The workbook has 1,620 unique 11-digit tract GEOIDs. All 411 single-campus tract
+assignments in the DTA are present: known income/poverty/education/rent values match
+numerically. One income and 23 rent sentinel cells (-666666666) were correctly
+converted to missing. Six assigned schools have the source income value 250001;
+treat that as a possible top-coded category requiring source documentation.
+
+Four multiple-campus schools match unweighted arithmetic averages of tract values
+(Brooke, Kennedy Academy, Hampden Charter and Roxbury Prep). These are averages of
+tract medians, not a pooled student or neighborhood household-income median.
+
+The filename '2024' alone does not prove ACS release/vintage: the supplied workbook
+does not contain official retrieval URLs, ACS table IDs, formulas, margins of error
+or vintage documentation. Numerical matching does not verify campus geocoding or
+that students live in the school neighborhood. Use campus-tract income as context,
+with primary SES grouping based on the school student low-income share.
+
+VERSIONS
+
+The two FINAL workbooks agree substantively; restoration-method wording differs.
+The STATA_READY workbook matches the DTA apart from three added analysis/marker
+variables. The older CLASS_OF_2025_UPDATED master has 1,827 schools and earlier
+FAFSA matching/count fields; its non-FAFSA overlapping fields reconcile. Keep the
+current DTA as baseline rather than substituting an older 'final' file by name.
+
+NEXT GATE
+
+Run 02_merge_enrollment.do and review its actual Stata log. Then resolve universe
+eligibility, FAFSA population/campus alignment, ACS provenance, MCAS filters and
+college follow-up definitions as applicable. Update the analysis input and labels
+before preparing website-ready tables and regressions. Counts reported here are
+source comparisons, not new regression findings. No causal SES effect is established.

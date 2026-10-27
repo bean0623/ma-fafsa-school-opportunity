@@ -1,0 +1,4342 @@
+{
+  "title": "FAFSA completion and college attendance association",
+  "provenance": {
+    "regressionCSV": "upload/03_regression_coefficients.csv",
+    "models": [
+      "C_base",
+      "C_plus_F"
+    ],
+    "doFile": "deliverables/03_analyze_ses.do",
+    "doFileLines": "312-318",
+    "runtimeLog": "upload/03_analysis.log",
+    "runtimeLogLines": "1708-1769",
+    "sampleCSV": "upload/03_school_data.csv",
+    "additionalControlsDTA": "upload/massachusetts_high_schools_analysis.dta:sel_el_pct,sel_swd_pct",
+    "excludedEvidence": [
+      "H2 uses original graduation-cohort FAFSA proxy and is excluded.",
+      "03_correlations.csv p-values are excluded because the negative-correlation export bug is known."
+    ]
+  },
+  "existingStataAdjustedAssociation": {
+    "model": "C_plus_F",
+    "outcome": "college_attend_pct",
+    "predictor": "ma_fafsa",
+    "slope_per_1pp": {
+      "model": "C_plus_F",
+      "outcome": "college_attend_pct",
+      "term": "ma_fafsa",
+      "vce": "district clustered",
+      "b": 0.487547052631397,
+      "se": 0.045411116879806,
+      "p": 6.61905513739e-23,
+      "ci_low": 0.398174991587732,
+      "ci_high": 0.576919113675062,
+      "n": 356,
+      "r2": 0.8465601716781,
+      "df": 294,
+      "n_clusters": 295.0,
+      "zero_se": 0
+    },
+    "slope_per_10pp": {
+      "b": 4.87547052631397,
+      "se": 0.454111168798065,
+      "ci_low": 3.9817499158773217,
+      "ci_high": 5.769191136750619,
+      "p": 6.61905513739e-23,
+      "n": 356,
+      "n_clusters": 295,
+      "df": 294,
+      "r2": 0.8465601716781002
+    },
+    "interpretation": "A 10-percentage-point higher school estimated FAFSA completion rate is associated with a 4.9-percentage-point higher college attendance rate, controlling for listed school characteristics.",
+    "controls": [
+      "Student low-income share, per 10 percentage points",
+      "Log grades 9-12 enrollment",
+      "School type: public secondary, charter, vocational/technical, other",
+      "Whole-school English learner percentage",
+      "Whole-school students with disabilities percentage"
+    ],
+    "doesNotIncludeCampusIncome": true,
+    "uncertainty": "95% confidence intervals; standard errors clustered by district; 295 districts and residual df 294.",
+    "causalLimit": "School-level observational association. College-going plans or other unmeasured differences can influence both FAFSA completion and college attendance. The coefficient is not an estimated effect of completing a FAFSA or of an assistance program.",
+    "populationLimit": "FAFSA numerator is a screened Federal Student Aid count divided by October 2024 senior enrollment, not matched student records. College attendance concerns Class of 2025 graduates observed by March 2026; the two populations differ."
+  },
+  "sameSampleBaseline": {
+    "model": "C_base",
+    "n": 356,
+    "n_clusters": 295,
+    "r2": 0.7313167705188124,
+    "r2WithFafsa": 0.8465601716781002,
+    "r2Increase": 0.11524340115928777,
+    "interpretation": "Adding estimated FAFSA completion increases in-sample R-squared. This is descriptive fit improvement, not causal mediation or out-of-sample predictive validation.",
+    "coefficients": [
+      {
+        "model": "C_base",
+        "outcome": "college_attend_pct",
+        "term": "ma_low10",
+        "vce": "district clustered",
+        "b": -5.009148607842345,
+        "se": 0.454774317662534,
+        "p": 7.5120946254e-24,
+        "ci_low": -5.904174338806049,
+        "ci_high": -4.114122876878641,
+        "n": 356,
+        "r2": 0.731316770518812,
+        "df": 294,
+        "n_clusters": 295.0,
+        "zero_se": 0
+      },
+      {
+        "model": "C_base",
+        "outcome": "college_attend_pct",
+        "term": "ma_ln912",
+        "vce": "district clustered",
+        "b": 2.589667851932968,
+        "se": 0.88365888782299,
+        "p": 0.003648180235261,
+        "ci_low": 0.850569113768884,
+        "ci_high": 4.328766590097053,
+        "n": 356,
+        "r2": 0.731316770518812,
+        "df": 294,
+        "n_clusters": 295.0,
+        "zero_se": 0
+      },
+      {
+        "model": "C_base",
+        "outcome": "college_attend_pct",
+        "term": "1b.ma_type",
+        "vce": "district clustered",
+        "b": 0.0,
+        "se": 0.0,
+        "p": null,
+        "ci_low": null,
+        "ci_high": null,
+        "n": 356,
+        "r2": 0.731316770518812,
+        "df": 294,
+        "n_clusters": 295.0,
+        "zero_se": 1
+      },
+      {
+        "model": "C_base",
+        "outcome": "college_attend_pct",
+        "term": "2.ma_type",
+        "vce": "district clustered",
+        "b": 14.98379083435596,
+        "se": 2.576760614157621,
+        "p": 1.5796458e-08,
+        "ci_low": 9.912556680108318,
+        "ci_high": 20.0550249886036,
+        "n": 356,
+        "r2": 0.731316770518812,
+        "df": 294,
+        "n_clusters": 295.0,
+        "zero_se": 0
+      },
+      {
+        "model": "C_base",
+        "outcome": "college_attend_pct",
+        "term": "3.ma_type",
+        "vce": "district clustered",
+        "b": -17.72706968093115,
+        "se": 2.019734080270692,
+        "p": 1.40113348228e-16,
+        "ci_low": -21.70203902580959,
+        "ci_high": -13.75210033605271,
+        "n": 356,
+        "r2": 0.731316770518812,
+        "df": 294,
+        "n_clusters": 295.0,
+        "zero_se": 0
+      },
+      {
+        "model": "C_base",
+        "outcome": "college_attend_pct",
+        "term": "4.ma_type",
+        "vce": "district clustered",
+        "b": 1.942090933771629,
+        "se": 3.150674369068128,
+        "p": 0.53810433952596,
+        "ci_low": -4.258643190129242,
+        "ci_high": 8.1428250576725,
+        "n": 356,
+        "r2": 0.731316770518812,
+        "df": 294,
+        "n_clusters": 295.0,
+        "zero_se": 0
+      },
+      {
+        "model": "C_base",
+        "outcome": "college_attend_pct",
+        "term": "sel_el_pct",
+        "vce": "district clustered",
+        "b": -0.239884691457809,
+        "se": 0.085894608208939,
+        "p": 0.005568477741931,
+        "ci_low": -0.408930922769169,
+        "ci_high": -0.07083846014645,
+        "n": 356,
+        "r2": 0.731316770518812,
+        "df": 294,
+        "n_clusters": 295.0,
+        "zero_se": 0
+      },
+      {
+        "model": "C_base",
+        "outcome": "college_attend_pct",
+        "term": "sel_swd_pct",
+        "vce": "district clustered",
+        "b": -0.490847278052616,
+        "se": 0.153345433699901,
+        "p": 0.001519874066006,
+        "ci_low": -0.792641164727292,
+        "ci_high": -0.189053391377938,
+        "n": 356,
+        "r2": 0.731316770518812,
+        "df": 294,
+        "n_clusters": 295.0,
+        "zero_se": 0
+      },
+      {
+        "model": "C_base",
+        "outcome": "college_attend_pct",
+        "term": "_cons",
+        "vce": "district clustered",
+        "b": 74.39964294905013,
+        "se": 7.207018149617863,
+        "p": 1.60128221906e-21,
+        "ci_low": 60.21575780666839,
+        "ci_high": 88.58352809143187,
+        "n": 356,
+        "r2": 0.731316770518812,
+        "df": 294,
+        "n_clusters": 295.0,
+        "zero_se": 0
+      }
+    ]
+  },
+  "independentValidation": {
+    "allStoredCoefficientFieldsMatch": true,
+    "fieldsChecked": 85,
+    "maximumAbsoluteDifference": 1.0160761121369433e-12,
+    "method": "OLS with district cluster sandwich variance and Stata finite-sample adjustment G/(G-1)*(N-1)/(N-K), t inference df=G-1.",
+    "models": {
+      "C_base": {
+        "n": 356,
+        "n_clusters": 295,
+        "df": 294,
+        "r2": 0.7313167705188125,
+        "coefficients": {
+          "_cons": {
+            "b": 74.39964294905005,
+            "se": 7.207018149618334,
+            "ci_low": 60.215757806667376,
+            "ci_high": 88.58352809143273,
+            "p": 1.6012822190681364e-21
+          },
+          "ma_low10": {
+            "b": -5.009148607842316,
+            "se": 0.45477431766251974,
+            "ci_low": -5.904174338805992,
+            "ci_high": -4.114122876878639,
+            "p": 7.512094625387944e-24
+          },
+          "ma_ln912": {
+            "b": 2.589667851932983,
+            "se": 0.8836588878230328,
+            "ci_low": 0.8505691137688141,
+            "ci_high": 4.328766590097152,
+            "p": 0.003648180235262128
+          },
+          "2.ma_type": {
+            "b": 14.983790834355888,
+            "se": 2.5767606141576302,
+            "ci_low": 9.912556680108231,
+            "ci_high": 20.055024988603545,
+            "p": 1.5796457675446973e-08
+          },
+          "3.ma_type": {
+            "b": -17.727069680931148,
+            "se": 2.019734080270699,
+            "ci_low": -21.702039025809597,
+            "ci_high": -13.752100336052697,
+            "p": 1.4011334822814476e-16
+          },
+          "4.ma_type": {
+            "b": 1.942090933771618,
+            "se": 3.1506743690681502,
+            "ci_low": -4.2586431901292965,
+            "ci_high": 8.142825057672532,
+            "p": 0.5381043395259653
+          },
+          "sel_el_pct": {
+            "b": -0.23988469145781258,
+            "se": 0.08589460820893781,
+            "ci_low": -0.4089309227691702,
+            "ci_high": -0.07083846014645495,
+            "p": 0.005568477741929865
+          },
+          "sel_swd_pct": {
+            "b": -0.49084727805261563,
+            "se": 0.15334543369990122,
+            "ci_low": -0.7926411647272926,
+            "ci_high": -0.18905339137793864,
+            "p": 0.0015198740660055698
+          }
+        }
+      },
+      "C_plus_F": {
+        "n": 356,
+        "n_clusters": 295,
+        "df": 294,
+        "r2": 0.8465601716781002,
+        "coefficients": {
+          "_cons": {
+            "b": 38.429045341862484,
+            "se": 6.762600792082941,
+            "ci_low": 25.119802752571907,
+            "ci_high": 51.73828793115306,
+            "p": 3.1926325279024305e-08
+          },
+          "ma_fafsa": {
+            "b": 0.4875470526313986,
+            "se": 0.04541111687980435,
+            "ci_low": 0.39817499158773795,
+            "ci_high": 0.5769191136750592,
+            "p": 6.619055137359702e-23
+          },
+          "ma_low10": {
+            "b": -4.152662432143626,
+            "se": 0.34730373118839325,
+            "ci_low": -4.836178989259275,
+            "ci_high": -3.4691458750279773,
+            "p": 4.057084485110955e-27
+          },
+          "ma_ln912": {
+            "b": 2.0991559041484193,
+            "se": 0.7337939947848261,
+            "ci_low": 0.6550011200024539,
+            "ci_high": 3.543310688294385,
+            "p": 0.004530244943901347
+          },
+          "2.ma_type": {
+            "b": 6.34959762349368,
+            "se": 1.8974782902411917,
+            "ci_low": 2.615235704289829,
+            "ci_high": 10.083959542697531,
+            "p": 0.0009253134249511715
+          },
+          "3.ma_type": {
+            "b": -10.80477503062591,
+            "se": 1.3606545181545937,
+            "ci_low": -13.482632502788768,
+            "ci_high": -8.126917558463052,
+            "p": 4.284310548417533e-14
+          },
+          "4.ma_type": {
+            "b": -5.554481201651444,
+            "se": 3.5800979244695768,
+            "ci_low": -12.600349091112529,
+            "ci_high": 1.4913866878096407,
+            "p": 0.12186040249881083
+          },
+          "sel_el_pct": {
+            "b": -0.0912466669580166,
+            "se": 0.08253558057203625,
+            "ci_low": -0.2536821112277981,
+            "ci_high": 0.07118877731176489,
+            "p": 0.2698280606912707
+          },
+          "sel_swd_pct": {
+            "b": -0.20457895832640433,
+            "se": 0.11700578943868642,
+            "ci_low": -0.4348540379694364,
+            "ci_high": 0.02569612131662774,
+            "p": 0.08142959652271443
+          }
+        }
+      }
+    }
+  },
+  "scatter": {
+    "x": "fafsaPct",
+    "y": "collegeAttendancePct",
+    "n": 356,
+    "nBps": 27,
+    "eligibleUniverse": 407,
+    "excludedWithoutBothOutcomes": 51,
+    "rows": [
+      {
+        "schoolCode": "00010505",
+        "schoolName": "Abington - Abington High",
+        "district": "Abington",
+        "isBps": false,
+        "fafsaPct": 53.90625,
+        "collegeAttendancePct": 61.0,
+        "lowIncomePct": 34.5,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "00050505",
+        "schoolName": "Agawam - Agawam High",
+        "district": "Agawam",
+        "isBps": false,
+        "fafsaPct": 62.77056277056276,
+        "collegeAttendancePct": 68.7,
+        "lowIncomePct": 37.6,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "00070505",
+        "schoolName": "Amesbury - Amesbury High",
+        "district": "Amesbury",
+        "isBps": false,
+        "fafsaPct": 57.69230769230769,
+        "collegeAttendancePct": 59.4,
+        "lowIncomePct": 29.7,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "00090505",
+        "schoolName": "Andover - Andover High",
+        "district": "Andover",
+        "isBps": false,
+        "fafsaPct": 70.52896725440806,
+        "collegeAttendancePct": 78.9,
+        "lowIncomePct": 11.8,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "00100505",
+        "schoolName": "Arlington - Arlington High",
+        "district": "Arlington",
+        "isBps": false,
+        "fafsaPct": 70.83333333333334,
+        "collegeAttendancePct": 75.8,
+        "lowIncomePct": 10.7,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "00140505",
+        "schoolName": "Ashland - Ashland High",
+        "district": "Ashland",
+        "isBps": false,
+        "fafsaPct": 67.9245283018868,
+        "collegeAttendancePct": 77.1,
+        "lowIncomePct": 22.7,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "00160505",
+        "schoolName": "Attleboro - Attleboro High",
+        "district": "Attleboro",
+        "isBps": false,
+        "fafsaPct": 56.66666666666666,
+        "collegeAttendancePct": 59.7,
+        "lowIncomePct": 36.5,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "00160515",
+        "schoolName": "Attleboro-Attleboro Community Academy",
+        "district": "Attleboro",
+        "isBps": false,
+        "fafsaPct": 21.73913043478261,
+        "collegeAttendancePct": 6.9,
+        "lowIncomePct": 64.1,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "00170505",
+        "schoolName": "Auburn - Auburn Senior High",
+        "district": "Auburn",
+        "isBps": false,
+        "fafsaPct": 72.12121212121212,
+        "collegeAttendancePct": 75.2,
+        "lowIncomePct": 26.5,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "00180510",
+        "schoolName": "Avon - Avon Middle High School",
+        "district": "Avon",
+        "isBps": false,
+        "fafsaPct": 63.1578947368421,
+        "collegeAttendancePct": 64.9,
+        "lowIncomePct": 46.7,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "00200505",
+        "schoolName": "Barnstable - Barnstable High",
+        "district": "Barnstable",
+        "isBps": false,
+        "fafsaPct": 50.0,
+        "collegeAttendancePct": 55.2,
+        "lowIncomePct": 53.0,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "00230505",
+        "schoolName": "Bedford - Bedford High",
+        "district": "Bedford",
+        "isBps": false,
+        "fafsaPct": 69.50672645739911,
+        "collegeAttendancePct": 79.7,
+        "lowIncomePct": 11.2,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "00240505",
+        "schoolName": "Belchertown - Belchertown High",
+        "district": "Belchertown",
+        "isBps": false,
+        "fafsaPct": 81.29496402877699,
+        "collegeAttendancePct": 74.1,
+        "lowIncomePct": 21.1,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "00250505",
+        "schoolName": "Bellingham - Bellingham High School",
+        "district": "Bellingham",
+        "isBps": false,
+        "fafsaPct": 60.13986013986013,
+        "collegeAttendancePct": 58.0,
+        "lowIncomePct": 29.1,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "00260505",
+        "schoolName": "Belmont - Belmont High",
+        "district": "Belmont",
+        "isBps": false,
+        "fafsaPct": 58.52272727272727,
+        "collegeAttendancePct": 73.6,
+        "lowIncomePct": 12.3,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "00300505",
+        "schoolName": "Beverly - Beverly High",
+        "district": "Beverly",
+        "isBps": false,
+        "fafsaPct": 65.83629893238434,
+        "collegeAttendancePct": 66.1,
+        "lowIncomePct": 32.5,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "00310505",
+        "schoolName": "Billerica - Billerica Memorial High School",
+        "district": "Billerica",
+        "isBps": false,
+        "fafsaPct": 70.98976109215018,
+        "collegeAttendancePct": 71.8,
+        "lowIncomePct": 25.4,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "00350074",
+        "schoolName": "Boston - Dearborn 6-12 STEM Academy",
+        "district": "Boston",
+        "isBps": true,
+        "fafsaPct": 64.04494382022472,
+        "collegeAttendancePct": 28.4,
+        "lowIncomePct": 83.2,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "00350426",
+        "schoolName": "Boston - Henderson K-12 Inclusion School Upper",
+        "district": "Boston",
+        "isBps": true,
+        "fafsaPct": 57.14285714285714,
+        "collegeAttendancePct": 53.8,
+        "lowIncomePct": 81.0,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "00350505",
+        "schoolName": "Boston - Brighton High School",
+        "district": "Boston",
+        "isBps": true,
+        "fafsaPct": 24.05063291139241,
+        "collegeAttendancePct": 19.9,
+        "lowIncomePct": 87.9,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "00350507",
+        "schoolName": "Boston - Boston International High School & Newcomers Academy",
+        "district": "Boston",
+        "isBps": true,
+        "fafsaPct": 33.33333333333333,
+        "collegeAttendancePct": 32.4,
+        "lowIncomePct": 87.8,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "00350515",
+        "schoolName": "Boston - Charlestown High School",
+        "district": "Boston",
+        "isBps": true,
+        "fafsaPct": 37.77777777777778,
+        "collegeAttendancePct": 21.8,
+        "lowIncomePct": 82.5,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "00350522",
+        "schoolName": "Boston - Excel High School",
+        "district": "Boston",
+        "isBps": true,
+        "fafsaPct": 72.72727272727273,
+        "collegeAttendancePct": 27.6,
+        "lowIncomePct": 85.7,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "00350525",
+        "schoolName": "Boston - Albert D Holland School of Technology",
+        "district": "Boston",
+        "isBps": true,
+        "fafsaPct": 57.14285714285714,
+        "collegeAttendancePct": 37.8,
+        "lowIncomePct": 84.2,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "00350530",
+        "schoolName": "Boston - East Boston High School",
+        "district": "Boston",
+        "isBps": true,
+        "fafsaPct": 39.93174061433447,
+        "collegeAttendancePct": 30.0,
+        "lowIncomePct": 75.0,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "00350535",
+        "schoolName": "Boston - English High School",
+        "district": "Boston",
+        "isBps": true,
+        "fafsaPct": 42.03821656050955,
+        "collegeAttendancePct": 27.9,
+        "lowIncomePct": 85.4,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "00350537",
+        "schoolName": "Boston - Madison Park Technical Vocational High School",
+        "district": "Boston",
+        "isBps": true,
+        "fafsaPct": 24.41860465116279,
+        "collegeAttendancePct": 23.7,
+        "lowIncomePct": 84.1,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "00350540",
+        "schoolName": "Boston - Fenway High School",
+        "district": "Boston",
+        "isBps": true,
+        "fafsaPct": 66.66666666666666,
+        "collegeAttendancePct": 54.4,
+        "lowIncomePct": 73.5,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "00350541",
+        "schoolName": "Boston - Another Course To College",
+        "district": "Boston",
+        "isBps": true,
+        "fafsaPct": 72.1311475409836,
+        "collegeAttendancePct": 51.6,
+        "lowIncomePct": 79.4,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "00350542",
+        "schoolName": "Boston - New Mission High School",
+        "district": "Boston",
+        "isBps": true,
+        "fafsaPct": 77.5,
+        "collegeAttendancePct": 58.8,
+        "lowIncomePct": 68.0,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "00350543",
+        "schoolName": "Boston-Greater Egleston High School",
+        "district": "Boston",
+        "isBps": true,
+        "fafsaPct": 11.9047619047619,
+        "collegeAttendancePct": 12.0,
+        "lowIncomePct": 79.5,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "00350545",
+        "schoolName": "Boston - Boston Latin Academy",
+        "district": "Boston",
+        "isBps": true,
+        "fafsaPct": 88.30188679245283,
+        "collegeAttendancePct": 77.7,
+        "lowIncomePct": 48.1,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "00350546",
+        "schoolName": "Boston - Boston Arts Academy",
+        "district": "Boston",
+        "isBps": true,
+        "fafsaPct": 73.14814814814815,
+        "collegeAttendancePct": 57.9,
+        "lowIncomePct": 59.4,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "00350548",
+        "schoolName": "Boston-Boston Adult Tech Academy",
+        "district": "Boston",
+        "isBps": true,
+        "fafsaPct": 14.03508771929824,
+        "collegeAttendancePct": 13.7,
+        "lowIncomePct": 89.0,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "00350549",
+        "schoolName": "Boston - Margarita Muniz Academy",
+        "district": "Boston",
+        "isBps": true,
+        "fafsaPct": 67.10526315789474,
+        "collegeAttendancePct": 40.3,
+        "lowIncomePct": 90.0,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "00350558",
+        "schoolName": "Boston - Ruth Batson Academy",
+        "district": "Boston",
+        "isBps": true,
+        "fafsaPct": 44.14414414414414,
+        "collegeAttendancePct": 38.0,
+        "lowIncomePct": 86.6,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "00350560",
+        "schoolName": "Boston - Boston Latin School",
+        "district": "Boston",
+        "isBps": true,
+        "fafsaPct": 88.66498740554157,
+        "collegeAttendancePct": 80.1,
+        "lowIncomePct": 31.3,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "00350565",
+        "schoolName": "Boston-Quincy Upper School",
+        "district": "Boston",
+        "isBps": true,
+        "fafsaPct": 88.70967741935483,
+        "collegeAttendancePct": 67.7,
+        "lowIncomePct": 67.3,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "00350575",
+        "schoolName": "Boston - O'Bryant School of Math & Science",
+        "district": "Boston",
+        "isBps": true,
+        "fafsaPct": 87.12121212121212,
+        "collegeAttendancePct": 68.0,
+        "lowIncomePct": 57.3,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "00350581",
+        "schoolName": "Boston - Community Academy of Science and Health",
+        "district": "Boston",
+        "isBps": true,
+        "fafsaPct": 36.89320388349515,
+        "collegeAttendancePct": 33.0,
+        "lowIncomePct": 84.7,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "00350655",
+        "schoolName": "Boston - Lyon High School",
+        "district": "Boston",
+        "isBps": true,
+        "fafsaPct": 40.0,
+        "collegeAttendancePct": 33.3,
+        "lowIncomePct": 78.9,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "00350657",
+        "schoolName": "Boston - TechBoston Academy",
+        "district": "Boston",
+        "isBps": true,
+        "fafsaPct": 60.28368794326241,
+        "collegeAttendancePct": 45.9,
+        "lowIncomePct": 85.6,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "00350690",
+        "schoolName": "Boston - Snowden International High School",
+        "district": "Boston",
+        "isBps": true,
+        "fafsaPct": 72.82608695652173,
+        "collegeAttendancePct": 58.1,
+        "lowIncomePct": 79.6,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "00350755",
+        "schoolName": "Boston - Boston Collaborative High School",
+        "district": "Boston",
+        "isBps": true,
+        "fafsaPct": 7.086614173228346,
+        "collegeAttendancePct": 10.8,
+        "lowIncomePct": 83.8,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "00360505",
+        "schoolName": "Bourne - Bourne High School",
+        "district": "Bourne",
+        "isBps": false,
+        "fafsaPct": 63.52941176470588,
+        "collegeAttendancePct": 66.7,
+        "lowIncomePct": 35.8,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "00400505",
+        "schoolName": "Braintree - Braintree High",
+        "district": "Braintree",
+        "isBps": false,
+        "fafsaPct": 71.26436781609196,
+        "collegeAttendancePct": 75.5,
+        "lowIncomePct": 27.8,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "00440505",
+        "schoolName": "Brockton - Brockton High",
+        "district": "Brockton",
+        "isBps": false,
+        "fafsaPct": 35.84474885844749,
+        "collegeAttendancePct": 41.1,
+        "lowIncomePct": 70.0,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "00440520",
+        "schoolName": "Brockton-Edison Evening Academy",
+        "district": "Brockton",
+        "isBps": false,
+        "fafsaPct": 5.64516129032258,
+        "collegeAttendancePct": 8.2,
+        "lowIncomePct": 66.2,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "00460505",
+        "schoolName": "Brookline - Brookline High",
+        "district": "Brookline",
+        "isBps": false,
+        "fafsaPct": 57.84671532846716,
+        "collegeAttendancePct": 72.9,
+        "lowIncomePct": 15.1,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "00480505",
+        "schoolName": "Burlington - Burlington High",
+        "district": "Burlington",
+        "isBps": false,
+        "fafsaPct": 69.23076923076923,
+        "collegeAttendancePct": 70.1,
+        "lowIncomePct": 21.3,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "00490506",
+        "schoolName": "Cambridge - Cambridge Rindge and Latin",
+        "district": "Cambridge",
+        "isBps": false,
+        "fafsaPct": 66.66666666666666,
+        "collegeAttendancePct": 60.7,
+        "lowIncomePct": 38.3,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "00500505",
+        "schoolName": "Canton - Canton High",
+        "district": "Canton",
+        "isBps": false,
+        "fafsaPct": 72.6457399103139,
+        "collegeAttendancePct": 76.9,
+        "lowIncomePct": 23.5,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "00520405",
+        "schoolName": "Carver - Carver Middle/High School",
+        "district": "Carver",
+        "isBps": false,
+        "fafsaPct": 57.44680851063831,
+        "collegeAttendancePct": 57.1,
+        "lowIncomePct": 27.5,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "00560505",
+        "schoolName": "Chelmsford - Chelmsford High",
+        "district": "Chelmsford",
+        "isBps": false,
+        "fafsaPct": 71.6374269005848,
+        "collegeAttendancePct": 77.0,
+        "lowIncomePct": 15.0,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "00570505",
+        "schoolName": "Chelsea - Chelsea High",
+        "district": "Chelsea",
+        "isBps": false,
+        "fafsaPct": 40.38997214484679,
+        "collegeAttendancePct": 29.9,
+        "lowIncomePct": 77.9,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "00570515",
+        "schoolName": "Chelsea-Chelsea Opportunity Academy",
+        "district": "Chelsea",
+        "isBps": false,
+        "fafsaPct": 30.43478260869566,
+        "collegeAttendancePct": 5.1,
+        "lowIncomePct": 72.0,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "00570705",
+        "schoolName": "Chelsea-Chelsea Virtual Learning Academy",
+        "district": "Chelsea",
+        "isBps": false,
+        "fafsaPct": 36.36363636363637,
+        "collegeAttendancePct": 16.7,
+        "lowIncomePct": 77.8,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "00610505",
+        "schoolName": "Chicopee - Chicopee High",
+        "district": "Chicopee",
+        "isBps": false,
+        "fafsaPct": 41.55251141552511,
+        "collegeAttendancePct": 49.3,
+        "lowIncomePct": 70.4,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "00610510",
+        "schoolName": "Chicopee - Chicopee Comprehensive High School",
+        "district": "Chicopee",
+        "isBps": false,
+        "fafsaPct": 44.48398576512456,
+        "collegeAttendancePct": 50.9,
+        "lowIncomePct": 51.1,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "00640505",
+        "schoolName": "Clinton - Clinton Senior High",
+        "district": "Clinton",
+        "isBps": false,
+        "fafsaPct": 58.62068965517241,
+        "collegeAttendancePct": 55.2,
+        "lowIncomePct": 50.0,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "00650505",
+        "schoolName": "Cohasset - Cohasset High School",
+        "district": "Cohasset",
+        "isBps": false,
+        "fafsaPct": 69.38775510204081,
+        "collegeAttendancePct": 83.8,
+        "lowIncomePct": 7.3,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "00710505",
+        "schoolName": "Danvers - Danvers High",
+        "district": "Danvers",
+        "isBps": false,
+        "fafsaPct": 68.44919786096256,
+        "collegeAttendancePct": 69.0,
+        "lowIncomePct": 28.6,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "00720505",
+        "schoolName": "Dartmouth - Dartmouth High",
+        "district": "Dartmouth",
+        "isBps": false,
+        "fafsaPct": 66.66666666666666,
+        "collegeAttendancePct": 73.2,
+        "lowIncomePct": 29.2,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "00730505",
+        "schoolName": "Dedham - Dedham High",
+        "district": "Dedham",
+        "isBps": false,
+        "fafsaPct": 69.68085106382979,
+        "collegeAttendancePct": 65.1,
+        "lowIncomePct": 31.4,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "00770505",
+        "schoolName": "Douglas - Douglas High School",
+        "district": "Douglas",
+        "isBps": false,
+        "fafsaPct": 75.0,
+        "collegeAttendancePct": 65.6,
+        "lowIncomePct": 27.0,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "00790505",
+        "schoolName": "Dracut - Dracut Senior High",
+        "district": "Dracut",
+        "isBps": false,
+        "fafsaPct": 61.11111111111111,
+        "collegeAttendancePct": 66.3,
+        "lowIncomePct": 34.7,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "00820505",
+        "schoolName": "Duxbury - Duxbury High",
+        "district": "Duxbury",
+        "isBps": false,
+        "fafsaPct": 69.5852534562212,
+        "collegeAttendancePct": 80.2,
+        "lowIncomePct": 7.1,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "00830505",
+        "schoolName": "East Bridgewater - East Bridgewater JR./SR. High School",
+        "district": "East Bridgewater",
+        "isBps": false,
+        "fafsaPct": 60.83333333333333,
+        "collegeAttendancePct": 56.4,
+        "lowIncomePct": 22.9,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "00860505",
+        "schoolName": "Easthampton - Easthampton High",
+        "district": "Easthampton",
+        "isBps": false,
+        "fafsaPct": 78.72340425531915,
+        "collegeAttendancePct": 76.6,
+        "lowIncomePct": 39.8,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "00870505",
+        "schoolName": "East Longmeadow - East Longmeadow High",
+        "district": "East Longmeadow",
+        "isBps": false,
+        "fafsaPct": 65.71428571428571,
+        "collegeAttendancePct": 75.6,
+        "lowIncomePct": 25.6,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "00880505",
+        "schoolName": "Easton - Oliver Ames High",
+        "district": "Easton",
+        "isBps": false,
+        "fafsaPct": 75.51724137931033,
+        "collegeAttendancePct": 78.8,
+        "lowIncomePct": 18.7,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "00930505",
+        "schoolName": "Everett - Everett High",
+        "district": "Everett",
+        "isBps": false,
+        "fafsaPct": 37.36263736263736,
+        "collegeAttendancePct": 34.6,
+        "lowIncomePct": 70.0,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "00940505",
+        "schoolName": "Fairhaven - Fairhaven High",
+        "district": "Fairhaven",
+        "isBps": false,
+        "fafsaPct": 63.76811594202898,
+        "collegeAttendancePct": 68.1,
+        "lowIncomePct": 29.9,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "00950505",
+        "schoolName": "Fall River - B M C Durfee High",
+        "district": "Fall River",
+        "isBps": false,
+        "fafsaPct": 45.18900343642612,
+        "collegeAttendancePct": 37.5,
+        "lowIncomePct": 72.4,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "00950525",
+        "schoolName": "Fall River-Resiliency Preparatory Academy",
+        "district": "Fall River",
+        "isBps": false,
+        "fafsaPct": 11.62790697674419,
+        "collegeAttendancePct": 12.1,
+        "lowIncomePct": 91.2,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "00960505",
+        "schoolName": "Falmouth - Falmouth High",
+        "district": "Falmouth",
+        "isBps": false,
+        "fafsaPct": 65.26315789473685,
+        "collegeAttendancePct": 68.5,
+        "lowIncomePct": 35.6,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "00970505",
+        "schoolName": "Fitchburg - Fitchburg High",
+        "district": "Fitchburg",
+        "isBps": false,
+        "fafsaPct": 51.73745173745174,
+        "collegeAttendancePct": 50.8,
+        "lowIncomePct": 67.5,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "00970510",
+        "schoolName": "Fitchburg-Goodrich Academy",
+        "district": "Fitchburg",
+        "isBps": false,
+        "fafsaPct": 20.21276595744681,
+        "collegeAttendancePct": 13.4,
+        "lowIncomePct": 75.8,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "00990505",
+        "schoolName": "Foxborough - Foxborough High",
+        "district": "Foxborough",
+        "isBps": false,
+        "fafsaPct": 70.1492537313433,
+        "collegeAttendancePct": 72.2,
+        "lowIncomePct": 23.2,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "01000515",
+        "schoolName": "Framingham - Framingham High School",
+        "district": "Framingham",
+        "isBps": false,
+        "fafsaPct": 52.56410256410257,
+        "collegeAttendancePct": 49.2,
+        "lowIncomePct": 53.2,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "01010505",
+        "schoolName": "Franklin - Franklin High",
+        "district": "Franklin",
+        "isBps": false,
+        "fafsaPct": 78.93401015228426,
+        "collegeAttendancePct": 82.1,
+        "lowIncomePct": 13.8,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "01030505",
+        "schoolName": "Gardner - Gardner High",
+        "district": "Gardner",
+        "isBps": false,
+        "fafsaPct": 55.48780487804878,
+        "collegeAttendancePct": 47.6,
+        "lowIncomePct": 56.6,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "01030515",
+        "schoolName": "Gardner-Gardner Academy for Learning and Technology",
+        "district": "Gardner",
+        "isBps": false,
+        "fafsaPct": 13.04347826086956,
+        "collegeAttendancePct": 50.0,
+        "lowIncomePct": 61.0,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "01050505",
+        "schoolName": "Georgetown - Georgetown High School",
+        "district": "Georgetown",
+        "isBps": false,
+        "fafsaPct": 68.75,
+        "collegeAttendancePct": 60.3,
+        "lowIncomePct": 17.2,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "01070505",
+        "schoolName": "Gloucester - Gloucester High",
+        "district": "Gloucester",
+        "isBps": false,
+        "fafsaPct": 47.48603351955308,
+        "collegeAttendancePct": 44.1,
+        "lowIncomePct": 45.4,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "01100505",
+        "schoolName": "Grafton - Grafton High School",
+        "district": "Grafton",
+        "isBps": false,
+        "fafsaPct": 68.20276497695853,
+        "collegeAttendancePct": 70.0,
+        "lowIncomePct": 19.6,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "01110505",
+        "schoolName": "Granby - Granby Jr Sr High School",
+        "district": "Granby",
+        "isBps": false,
+        "fafsaPct": 64.70588235294117,
+        "collegeAttendancePct": 71.2,
+        "lowIncomePct": 34.5,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "01140505",
+        "schoolName": "Greenfield - Greenfield High",
+        "district": "Greenfield",
+        "isBps": false,
+        "fafsaPct": 39.53488372093023,
+        "collegeAttendancePct": 48.8,
+        "lowIncomePct": 61.9,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "01170505",
+        "schoolName": "Hadley - Hopkins Academy",
+        "district": "Hadley",
+        "isBps": false,
+        "fafsaPct": 69.04761904761905,
+        "collegeAttendancePct": 71.8,
+        "lowIncomePct": 28.1,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "01220505",
+        "schoolName": "Hanover - Hanover High",
+        "district": "Hanover",
+        "isBps": false,
+        "fafsaPct": 75.29411764705883,
+        "collegeAttendancePct": 84.4,
+        "lowIncomePct": 10.4,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "01250505",
+        "schoolName": "Harvard - The Bromfield High School",
+        "district": "Harvard",
+        "isBps": false,
+        "fafsaPct": 65.4320987654321,
+        "collegeAttendancePct": 75.0,
+        "lowIncomePct": 9.5,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "01270505",
+        "schoolName": "Hatfield - Smith Academy",
+        "district": "Hatfield",
+        "isBps": false,
+        "fafsaPct": 75.0,
+        "collegeAttendancePct": 72.2,
+        "lowIncomePct": 14.7,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "01280505",
+        "schoolName": "Haverhill - Haverhill High",
+        "district": "Haverhill",
+        "isBps": false,
+        "fafsaPct": 44.72573839662447,
+        "collegeAttendancePct": 27.7,
+        "lowIncomePct": 55.8,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "01310505",
+        "schoolName": "Hingham - Hingham High",
+        "district": "Hingham",
+        "isBps": false,
+        "fafsaPct": 63.49809885931559,
+        "collegeAttendancePct": 85.5,
+        "lowIncomePct": 9.2,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "01330505",
+        "schoolName": "Holbrook - Holbrook Middle High School",
+        "district": "Holbrook",
+        "isBps": false,
+        "fafsaPct": 55.00000000000001,
+        "collegeAttendancePct": 67.1,
+        "lowIncomePct": 45.4,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "01360505",
+        "schoolName": "Holliston - Holliston High",
+        "district": "Holliston",
+        "isBps": false,
+        "fafsaPct": 73.5,
+        "collegeAttendancePct": 81.0,
+        "lowIncomePct": 11.6,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "01370505",
+        "schoolName": "Holyoke - Holyoke High",
+        "district": "Holyoke",
+        "isBps": false,
+        "fafsaPct": 31.2807881773399,
+        "collegeAttendancePct": 45.5,
+        "lowIncomePct": 81.5,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "01380505",
+        "schoolName": "Hopedale - Hopedale Jr Sr High",
+        "district": "Hopedale",
+        "isBps": false,
+        "fafsaPct": 67.6923076923077,
+        "collegeAttendancePct": 74.2,
+        "lowIncomePct": 21.9,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "01390505",
+        "schoolName": "Hopkinton - Hopkinton High",
+        "district": "Hopkinton",
+        "isBps": false,
+        "fafsaPct": 71.6923076923077,
+        "collegeAttendancePct": 81.6,
+        "lowIncomePct": 7.2,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "01410505",
+        "schoolName": "Hudson - Hudson High",
+        "district": "Hudson",
+        "isBps": false,
+        "fafsaPct": 62.2093023255814,
+        "collegeAttendancePct": 63.2,
+        "lowIncomePct": 38.1,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "01420505",
+        "schoolName": "Hull - Hull High",
+        "district": "Hull",
+        "isBps": false,
+        "fafsaPct": 60.0,
+        "collegeAttendancePct": 61.3,
+        "lowIncomePct": 31.7,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "01440505",
+        "schoolName": "Ipswich - Ipswich High",
+        "district": "Ipswich",
+        "isBps": false,
+        "fafsaPct": 63.47826086956522,
+        "collegeAttendancePct": 76.8,
+        "lowIncomePct": 19.0,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "01490515",
+        "schoolName": "Lawrence - Lawrence High School",
+        "district": "Lawrence",
+        "isBps": false,
+        "fafsaPct": 42.87369640787949,
+        "collegeAttendancePct": 21.4,
+        "lowIncomePct": 82.1,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "01500505",
+        "schoolName": "Lee - Lee Middle/High School",
+        "district": "Lee",
+        "isBps": false,
+        "fafsaPct": 61.53846153846154,
+        "collegeAttendancePct": 56.9,
+        "lowIncomePct": 41.5,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "01510505",
+        "schoolName": "Leicester - Leicester High",
+        "district": "Leicester",
+        "isBps": false,
+        "fafsaPct": 60.91954022988506,
+        "collegeAttendancePct": 65.5,
+        "lowIncomePct": 39.7,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "01520505",
+        "schoolName": "Lenox - Lenox Memorial High",
+        "district": "Lenox",
+        "isBps": false,
+        "fafsaPct": 63.1578947368421,
+        "collegeAttendancePct": 83.9,
+        "lowIncomePct": 21.0,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "01530505",
+        "schoolName": "Leominster - Leominster High School",
+        "district": "Leominster",
+        "isBps": false,
+        "fafsaPct": 83.92857142857143,
+        "collegeAttendancePct": 63.5,
+        "lowIncomePct": 48.2,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "01530515",
+        "schoolName": "Leominster-Leominster Center for Excellence",
+        "district": "Leominster",
+        "isBps": false,
+        "fafsaPct": 26.66666666666667,
+        "collegeAttendancePct": 17.6,
+        "lowIncomePct": 67.7,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "01530605",
+        "schoolName": "Leominster - Center For Technical Education Innovation",
+        "district": "Leominster",
+        "isBps": false,
+        "fafsaPct": 10.94890510948905,
+        "collegeAttendancePct": 39.8,
+        "lowIncomePct": 50.3,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "01550505",
+        "schoolName": "Lexington - Lexington High",
+        "district": "Lexington",
+        "isBps": false,
+        "fafsaPct": 59.96621621621622,
+        "collegeAttendancePct": 77.8,
+        "lowIncomePct": 8.4,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "01580505",
+        "schoolName": "Littleton - Littleton High School",
+        "district": "Littleton",
+        "isBps": false,
+        "fafsaPct": 76.61290322580645,
+        "collegeAttendancePct": 85.2,
+        "lowIncomePct": 7.9,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "01590505",
+        "schoolName": "Longmeadow - Longmeadow High",
+        "district": "Longmeadow",
+        "isBps": false,
+        "fafsaPct": 72.60869565217392,
+        "collegeAttendancePct": 82.2,
+        "lowIncomePct": 12.2,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "01600505",
+        "schoolName": "Lowell - Lowell High",
+        "district": "Lowell",
+        "isBps": false,
+        "fafsaPct": 42.99876084262701,
+        "collegeAttendancePct": 53.8,
+        "lowIncomePct": 68.4,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "01610505",
+        "schoolName": "Ludlow - Ludlow Senior High",
+        "district": "Ludlow",
+        "isBps": false,
+        "fafsaPct": 63.04347826086957,
+        "collegeAttendancePct": 67.0,
+        "lowIncomePct": 32.5,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "01620505",
+        "schoolName": "Lunenburg - Lunenburg High",
+        "district": "Lunenburg",
+        "isBps": false,
+        "fafsaPct": 62.5,
+        "collegeAttendancePct": 61.2,
+        "lowIncomePct": 21.9,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "01630505",
+        "schoolName": "Lynn - Classical High",
+        "district": "Lynn",
+        "isBps": false,
+        "fafsaPct": 36.328125,
+        "collegeAttendancePct": 35.0,
+        "lowIncomePct": 71.1,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "01630510",
+        "schoolName": "Lynn - Lynn English High",
+        "district": "Lynn",
+        "isBps": false,
+        "fafsaPct": 32.85968028419182,
+        "collegeAttendancePct": 32.2,
+        "lowIncomePct": 75.3,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "01630605",
+        "schoolName": "Lynn - Lynn Vocational Technical Institute",
+        "district": "Lynn",
+        "isBps": false,
+        "fafsaPct": 46.90909090909091,
+        "collegeAttendancePct": 42.9,
+        "lowIncomePct": 68.0,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "01640505",
+        "schoolName": "Lynnfield - Lynnfield High",
+        "district": "Lynnfield",
+        "isBps": false,
+        "fafsaPct": 69.50354609929079,
+        "collegeAttendancePct": 86.1,
+        "lowIncomePct": 11.6,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "01650505",
+        "schoolName": "Malden - Malden High",
+        "district": "Malden",
+        "isBps": false,
+        "fafsaPct": 52.7542372881356,
+        "collegeAttendancePct": 49.8,
+        "lowIncomePct": 63.7,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "01670505",
+        "schoolName": "Mansfield - Mansfield High",
+        "district": "Mansfield",
+        "isBps": false,
+        "fafsaPct": 71.78423236514523,
+        "collegeAttendancePct": 79.7,
+        "lowIncomePct": 18.8,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "01680505",
+        "schoolName": "Marblehead - Marblehead High",
+        "district": "Marblehead",
+        "isBps": false,
+        "fafsaPct": 74.68879668049793,
+        "collegeAttendancePct": 76.3,
+        "lowIncomePct": 10.7,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "01700505",
+        "schoolName": "Marlborough - Marlborough High",
+        "district": "Marlborough",
+        "isBps": false,
+        "fafsaPct": 34.82758620689655,
+        "collegeAttendancePct": 33.7,
+        "lowIncomePct": 58.3,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "01710505",
+        "schoolName": "Marshfield - Marshfield High",
+        "district": "Marshfield",
+        "isBps": false,
+        "fafsaPct": 73.58490566037736,
+        "collegeAttendancePct": 80.7,
+        "lowIncomePct": 16.4,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "01720505",
+        "schoolName": "Mashpee - Mashpee Middle-High School",
+        "district": "Mashpee",
+        "isBps": false,
+        "fafsaPct": 71.02803738317756,
+        "collegeAttendancePct": 75.5,
+        "lowIncomePct": 36.2,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "01740505",
+        "schoolName": "Maynard - Maynard High",
+        "district": "Maynard",
+        "isBps": false,
+        "fafsaPct": 75.30864197530865,
+        "collegeAttendancePct": 77.6,
+        "lowIncomePct": 23.2,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "01750505",
+        "schoolName": "Medfield - Medfield Senior High",
+        "district": "Medfield",
+        "isBps": false,
+        "fafsaPct": 60.57142857142858,
+        "collegeAttendancePct": 82.8,
+        "lowIncomePct": 6.7,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "01760505",
+        "schoolName": "Medford - Medford High",
+        "district": "Medford",
+        "isBps": false,
+        "fafsaPct": 33.94160583941606,
+        "collegeAttendancePct": 56.2,
+        "lowIncomePct": 42.2,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "01770505",
+        "schoolName": "Medway - Medway High",
+        "district": "Medway",
+        "isBps": false,
+        "fafsaPct": 73.49397590361446,
+        "collegeAttendancePct": 75.3,
+        "lowIncomePct": 14.8,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "01780505",
+        "schoolName": "Melrose - Melrose High",
+        "district": "Melrose",
+        "isBps": false,
+        "fafsaPct": 72.0164609053498,
+        "collegeAttendancePct": 80.1,
+        "lowIncomePct": 16.3,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "01810505",
+        "schoolName": "Methuen - Methuen High",
+        "district": "Methuen",
+        "isBps": false,
+        "fafsaPct": 56.18661257606491,
+        "collegeAttendancePct": 40.0,
+        "lowIncomePct": 50.5,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "01820505",
+        "schoolName": "Middleborough - Middleborough High",
+        "district": "Middleborough",
+        "isBps": false,
+        "fafsaPct": 66.3157894736842,
+        "collegeAttendancePct": 52.0,
+        "lowIncomePct": 35.8,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "01850505",
+        "schoolName": "Milford - Milford High",
+        "district": "Milford",
+        "isBps": false,
+        "fafsaPct": 54.48717948717948,
+        "collegeAttendancePct": 51.9,
+        "lowIncomePct": 52.9,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "01860505",
+        "schoolName": "Millbury - Millbury Junior/Senior High",
+        "district": "Millbury",
+        "isBps": false,
+        "fafsaPct": 71.1864406779661,
+        "collegeAttendancePct": 61.3,
+        "lowIncomePct": 36.3,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "01870505",
+        "schoolName": "Millis - Millis High School",
+        "district": "Millis",
+        "isBps": false,
+        "fafsaPct": 75.9493670886076,
+        "collegeAttendancePct": 74.4,
+        "lowIncomePct": 16.8,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "01890505",
+        "schoolName": "Milton - Milton High",
+        "district": "Milton",
+        "isBps": false,
+        "fafsaPct": 75.47169811320755,
+        "collegeAttendancePct": 78.6,
+        "lowIncomePct": 15.1,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "01910505",
+        "schoolName": "Monson - Monson High School",
+        "district": "Monson",
+        "isBps": false,
+        "fafsaPct": 62.96296296296296,
+        "collegeAttendancePct": 68.0,
+        "lowIncomePct": 40.4,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "01970505",
+        "schoolName": "Nantucket - Nantucket High",
+        "district": "Nantucket",
+        "isBps": false,
+        "fafsaPct": 58.62068965517241,
+        "collegeAttendancePct": 60.1,
+        "lowIncomePct": 28.9,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "01980505",
+        "schoolName": "Natick - Natick High",
+        "district": "Natick",
+        "isBps": false,
+        "fafsaPct": 74.8051948051948,
+        "collegeAttendancePct": 81.8,
+        "lowIncomePct": 15.0,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "01990505",
+        "schoolName": "Needham - Needham High",
+        "district": "Needham",
+        "isBps": false,
+        "fafsaPct": 59.02439024390244,
+        "collegeAttendancePct": 85.0,
+        "lowIncomePct": 5.8,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "02010505",
+        "schoolName": "New Bedford - New Bedford High",
+        "district": "New Bedford",
+        "isBps": false,
+        "fafsaPct": 30.40238450074516,
+        "collegeAttendancePct": 26.1,
+        "lowIncomePct": 78.8,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "02010515",
+        "schoolName": "New Bedford-Whaling City Junior/Senior High School",
+        "district": "New Bedford",
+        "isBps": false,
+        "fafsaPct": 7.352941176470589,
+        "collegeAttendancePct": 5.1,
+        "lowIncomePct": 88.0,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "02040505",
+        "schoolName": "Newburyport - Newburyport High",
+        "district": "Newburyport",
+        "isBps": false,
+        "fafsaPct": 67.00507614213198,
+        "collegeAttendancePct": 66.5,
+        "lowIncomePct": 12.1,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "02070505",
+        "schoolName": "Newton - Newton North High",
+        "district": "Newton",
+        "isBps": false,
+        "fafsaPct": 56.92599620493358,
+        "collegeAttendancePct": 72.8,
+        "lowIncomePct": 15.8,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "02070510",
+        "schoolName": "Newton - Newton South High",
+        "district": "Newton",
+        "isBps": false,
+        "fafsaPct": 55.74468085106383,
+        "collegeAttendancePct": 72.6,
+        "lowIncomePct": 11.6,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "02090505",
+        "schoolName": "North Adams - Drury High",
+        "district": "North Adams",
+        "isBps": false,
+        "fafsaPct": 48.71794871794872,
+        "collegeAttendancePct": 50.7,
+        "lowIncomePct": 61.6,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "02100505",
+        "schoolName": "Northampton - Northampton High",
+        "district": "Northampton",
+        "isBps": false,
+        "fafsaPct": 72.2943722943723,
+        "collegeAttendancePct": 68.0,
+        "lowIncomePct": 24.3,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "02110505",
+        "schoolName": "North Andover - North Andover High",
+        "district": "North Andover",
+        "isBps": false,
+        "fafsaPct": 64.77611940298507,
+        "collegeAttendancePct": 64.8,
+        "lowIncomePct": 24.2,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "02120505",
+        "schoolName": "North Attleborough - North Attleboro High",
+        "district": "North Attleborough",
+        "isBps": false,
+        "fafsaPct": 75.25083612040135,
+        "collegeAttendancePct": 73.0,
+        "lowIncomePct": 22.4,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "02140505",
+        "schoolName": "Northbridge - Northbridge High",
+        "district": "Northbridge",
+        "isBps": false,
+        "fafsaPct": 59.78260869565217,
+        "collegeAttendancePct": 56.5,
+        "lowIncomePct": 36.3,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "02150505",
+        "schoolName": "North Brookfield - North Brookfield High",
+        "district": "North Brookfield",
+        "isBps": false,
+        "fafsaPct": 33.33333333333333,
+        "collegeAttendancePct": 33.3,
+        "lowIncomePct": 50.3,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "02170505",
+        "schoolName": "North Reading - North Reading High",
+        "district": "North Reading",
+        "isBps": false,
+        "fafsaPct": 68.51851851851852,
+        "collegeAttendancePct": 75.5,
+        "lowIncomePct": 11.8,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "02180505",
+        "schoolName": "Norton - Norton High",
+        "district": "Norton",
+        "isBps": false,
+        "fafsaPct": 70.0,
+        "collegeAttendancePct": 66.5,
+        "lowIncomePct": 22.9,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "02190505",
+        "schoolName": "Norwell - Norwell High",
+        "district": "Norwell",
+        "isBps": false,
+        "fafsaPct": 66.66666666666666,
+        "collegeAttendancePct": 84.6,
+        "lowIncomePct": 6.7,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "02200505",
+        "schoolName": "Norwood - Norwood High",
+        "district": "Norwood",
+        "isBps": false,
+        "fafsaPct": 58.13008130081301,
+        "collegeAttendancePct": 60.1,
+        "lowIncomePct": 40.0,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "02260505",
+        "schoolName": "Oxford - Oxford High",
+        "district": "Oxford",
+        "isBps": false,
+        "fafsaPct": 50.48543689320388,
+        "collegeAttendancePct": 54.7,
+        "lowIncomePct": 46.1,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "02270505",
+        "schoolName": "Palmer - Palmer High",
+        "district": "Palmer",
+        "isBps": false,
+        "fafsaPct": 44.87179487179488,
+        "collegeAttendancePct": 39.5,
+        "lowIncomePct": 54.8,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "02290510",
+        "schoolName": "Peabody - Peabody Veterans Memorial High",
+        "district": "Peabody",
+        "isBps": false,
+        "fafsaPct": 58.89967637540453,
+        "collegeAttendancePct": 58.9,
+        "lowIncomePct": 46.1,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "02310505",
+        "schoolName": "Pembroke - Pembroke High School",
+        "district": "Pembroke",
+        "isBps": false,
+        "fafsaPct": 71.6867469879518,
+        "collegeAttendancePct": 78.2,
+        "lowIncomePct": 17.4,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "02360505",
+        "schoolName": "Pittsfield - Pittsfield High",
+        "district": "Pittsfield",
+        "isBps": false,
+        "fafsaPct": 59.62732919254658,
+        "collegeAttendancePct": 64.5,
+        "lowIncomePct": 58.6,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "02360510",
+        "schoolName": "Pittsfield - Taconic High",
+        "district": "Pittsfield",
+        "isBps": false,
+        "fafsaPct": 52.0,
+        "collegeAttendancePct": 53.4,
+        "lowIncomePct": 61.9,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "02390505",
+        "schoolName": "Plymouth - Plymouth North High",
+        "district": "Plymouth",
+        "isBps": false,
+        "fafsaPct": 62.76276276276276,
+        "collegeAttendancePct": 62.7,
+        "lowIncomePct": 31.2,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "02390515",
+        "schoolName": "Plymouth - Plymouth South High",
+        "district": "Plymouth",
+        "isBps": false,
+        "fafsaPct": 62.29508196721311,
+        "collegeAttendancePct": 57.7,
+        "lowIncomePct": 23.8,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "02430505",
+        "schoolName": "Quincy - Quincy High",
+        "district": "Quincy",
+        "isBps": false,
+        "fafsaPct": 59.79899497487438,
+        "collegeAttendancePct": 54.4,
+        "lowIncomePct": 55.2,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "02430510",
+        "schoolName": "Quincy - North Quincy High",
+        "district": "Quincy",
+        "isBps": false,
+        "fafsaPct": 76.775956284153,
+        "collegeAttendancePct": 71.7,
+        "lowIncomePct": 40.1,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "02440505",
+        "schoolName": "Randolph - Randolph High",
+        "district": "Randolph",
+        "isBps": false,
+        "fafsaPct": 67.33333333333333,
+        "collegeAttendancePct": 51.6,
+        "lowIncomePct": 64.1,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "02460505",
+        "schoolName": "Reading - Reading Memorial High",
+        "district": "Reading",
+        "isBps": false,
+        "fafsaPct": 76.15384615384615,
+        "collegeAttendancePct": 81.4,
+        "lowIncomePct": 12.1,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "02480505",
+        "schoolName": "Revere - Revere High",
+        "district": "Revere",
+        "isBps": false,
+        "fafsaPct": 56.70995670995671,
+        "collegeAttendancePct": 30.2,
+        "lowIncomePct": 64.3,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "02480520",
+        "schoolName": "Revere-CityLab Innovation High School",
+        "district": "Revere",
+        "isBps": false,
+        "fafsaPct": 71.42857142857143,
+        "collegeAttendancePct": 9.1,
+        "lowIncomePct": 63.2,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "02510505",
+        "schoolName": "Rockland - Rockland Senior High",
+        "district": "Rockland",
+        "isBps": false,
+        "fafsaPct": 56.91056910569105,
+        "collegeAttendancePct": 55.4,
+        "lowIncomePct": 44.9,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "02520510",
+        "schoolName": "Rockport - Rockport Middle High",
+        "district": "Rockport",
+        "isBps": false,
+        "fafsaPct": 74.4186046511628,
+        "collegeAttendancePct": 73.2,
+        "lowIncomePct": 26.4,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "02580505",
+        "schoolName": "Salem - Salem High",
+        "district": "Salem",
+        "isBps": false,
+        "fafsaPct": 47.41784037558686,
+        "collegeAttendancePct": 38.5,
+        "lowIncomePct": 61.7,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "02580510",
+        "schoolName": "Salem-New Liberty Innovation School",
+        "district": "Salem",
+        "isBps": false,
+        "fafsaPct": 61.53846153846154,
+        "collegeAttendancePct": 26.7,
+        "lowIncomePct": 63.9,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "02610505",
+        "schoolName": "Sandwich - Sandwich Middle High School",
+        "district": "Sandwich",
+        "isBps": false,
+        "fafsaPct": 72.79411764705883,
+        "collegeAttendancePct": 82.7,
+        "lowIncomePct": 19.3,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "02620505",
+        "schoolName": "Saugus - Saugus High",
+        "district": "Saugus",
+        "isBps": false,
+        "fafsaPct": 57.37704918032787,
+        "collegeAttendancePct": 59.2,
+        "lowIncomePct": 49.6,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "02640505",
+        "schoolName": "Scituate - Scituate High School",
+        "district": "Scituate",
+        "isBps": false,
+        "fafsaPct": 70.58823529411765,
+        "collegeAttendancePct": 79.7,
+        "lowIncomePct": 12.6,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "02650505",
+        "schoolName": "Seekonk - Seekonk High",
+        "district": "Seekonk",
+        "isBps": false,
+        "fafsaPct": 73.33333333333333,
+        "collegeAttendancePct": 69.1,
+        "lowIncomePct": 16.0,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "02660505",
+        "schoolName": "Sharon - Sharon High",
+        "district": "Sharon",
+        "isBps": false,
+        "fafsaPct": 68.53146853146853,
+        "collegeAttendancePct": 79.6,
+        "lowIncomePct": 13.4,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "02710505",
+        "schoolName": "Shrewsbury - Shrewsbury High School",
+        "district": "Shrewsbury",
+        "isBps": false,
+        "fafsaPct": 70.76566125290023,
+        "collegeAttendancePct": 76.5,
+        "lowIncomePct": 16.2,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "02740505",
+        "schoolName": "Somerville - Somerville High",
+        "district": "Somerville",
+        "isBps": false,
+        "fafsaPct": 57.54985754985755,
+        "collegeAttendancePct": 49.9,
+        "lowIncomePct": 52.7,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "02770515",
+        "schoolName": "Southbridge - Southbridge High School",
+        "district": "Southbridge",
+        "isBps": false,
+        "fafsaPct": 27.08333333333333,
+        "collegeAttendancePct": 25.3,
+        "lowIncomePct": 77.6,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "02780505",
+        "schoolName": "South Hadley - South Hadley High",
+        "district": "South Hadley",
+        "isBps": false,
+        "fafsaPct": 58.91472868217055,
+        "collegeAttendancePct": 68.5,
+        "lowIncomePct": 31.5,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "02810205",
+        "schoolName": "Springfield - The Springfield Renaissance School an Expeditionary Learning School",
+        "district": "Springfield",
+        "isBps": false,
+        "fafsaPct": 83.78378378378379,
+        "collegeAttendancePct": 71.2,
+        "lowIncomePct": 75.9,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "02810320",
+        "schoolName": "Springfield - John J Duggan Academy",
+        "district": "Springfield",
+        "isBps": false,
+        "fafsaPct": 78.46153846153847,
+        "collegeAttendancePct": 47.9,
+        "lowIncomePct": 72.5,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "02810475",
+        "schoolName": "Springfield - Conservatory of the Arts",
+        "district": "Springfield",
+        "isBps": false,
+        "fafsaPct": 78.94736842105263,
+        "collegeAttendancePct": 33.3,
+        "lowIncomePct": 80.7,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "02810500",
+        "schoolName": "Springfield - Springfield Central High",
+        "district": "Springfield",
+        "isBps": false,
+        "fafsaPct": 77.73019271948608,
+        "collegeAttendancePct": 37.7,
+        "lowIncomePct": 79.5,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "02810510",
+        "schoolName": "Springfield - High School Of Commerce",
+        "district": "Springfield",
+        "isBps": false,
+        "fafsaPct": 22.80701754385965,
+        "collegeAttendancePct": 33.6,
+        "lowIncomePct": 83.1,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "02810530",
+        "schoolName": "Springfield - Springfield High School of Science and Technology",
+        "district": "Springfield",
+        "isBps": false,
+        "fafsaPct": 82.18390804597702,
+        "collegeAttendancePct": 27.5,
+        "lowIncomePct": 86.4,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "02810620",
+        "schoolName": "Springfield - Roger L. Putnam Vocational Technical Academy",
+        "district": "Springfield",
+        "isBps": false,
+        "fafsaPct": 62.18749999999999,
+        "collegeAttendancePct": 43.2,
+        "lowIncomePct": 73.2,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "02810705",
+        "schoolName": "Springfield - The Springfield Virtual School",
+        "district": "Springfield",
+        "isBps": false,
+        "fafsaPct": 63.63636363636363,
+        "collegeAttendancePct": 15.2,
+        "lowIncomePct": 86.0,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "02840505",
+        "schoolName": "Stoneham - Stoneham High",
+        "district": "Stoneham",
+        "isBps": false,
+        "fafsaPct": 75.0,
+        "collegeAttendancePct": 75.9,
+        "lowIncomePct": 25.4,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "02850505",
+        "schoolName": "Stoughton - Stoughton High",
+        "district": "Stoughton",
+        "isBps": false,
+        "fafsaPct": 58.99280575539569,
+        "collegeAttendancePct": 63.7,
+        "lowIncomePct": 44.2,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "02900510",
+        "schoolName": "Sutton - Sutton High School",
+        "district": "Sutton",
+        "isBps": false,
+        "fafsaPct": 61.05263157894737,
+        "collegeAttendancePct": 68.8,
+        "lowIncomePct": 18.3,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "02910505",
+        "schoolName": "Swampscott - Swampscott High",
+        "district": "Swampscott",
+        "isBps": false,
+        "fafsaPct": 69.64285714285714,
+        "collegeAttendancePct": 77.4,
+        "lowIncomePct": 24.2,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "02920505",
+        "schoolName": "Swansea - Joseph Case High",
+        "district": "Swansea",
+        "isBps": false,
+        "fafsaPct": 58.87096774193549,
+        "collegeAttendancePct": 66.1,
+        "lowIncomePct": 24.7,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "02930505",
+        "schoolName": "Taunton - Taunton High",
+        "district": "Taunton",
+        "isBps": false,
+        "fafsaPct": 51.74418604651163,
+        "collegeAttendancePct": 55.4,
+        "lowIncomePct": 54.3,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "02930705",
+        "schoolName": "Taunton-Taunton Public Virtual Academy (TPVA)",
+        "district": "Taunton",
+        "isBps": false,
+        "fafsaPct": 38.46153846153847,
+        "collegeAttendancePct": 23.5,
+        "lowIncomePct": 81.0,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "02950505",
+        "schoolName": "Tewksbury - Tewksbury Memorial High",
+        "district": "Tewksbury",
+        "isBps": false,
+        "fafsaPct": 80.34682080924856,
+        "collegeAttendancePct": 82.1,
+        "lowIncomePct": 19.7,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "03010505",
+        "schoolName": "Tyngsborough - Tyngsborough High School",
+        "district": "Tyngsborough",
+        "isBps": false,
+        "fafsaPct": 70.40816326530613,
+        "collegeAttendancePct": 78.6,
+        "lowIncomePct": 19.0,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "03040505",
+        "schoolName": "Uxbridge - Uxbridge High",
+        "district": "Uxbridge",
+        "isBps": false,
+        "fafsaPct": 77.67857142857143,
+        "collegeAttendancePct": 65.5,
+        "lowIncomePct": 25.9,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "03050505",
+        "schoolName": "Wakefield - Wakefield Memorial High",
+        "district": "Wakefield",
+        "isBps": false,
+        "fafsaPct": 73.30097087378641,
+        "collegeAttendancePct": 74.0,
+        "lowIncomePct": 16.9,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "03070505",
+        "schoolName": "Walpole - Walpole High",
+        "district": "Walpole",
+        "isBps": false,
+        "fafsaPct": 71.91489361702128,
+        "collegeAttendancePct": 79.8,
+        "lowIncomePct": 15.0,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "03080505",
+        "schoolName": "Waltham - Waltham Sr High",
+        "district": "Waltham",
+        "isBps": false,
+        "fafsaPct": 50.68181818181819,
+        "collegeAttendancePct": 48.8,
+        "lowIncomePct": 51.5,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "03090505",
+        "schoolName": "Ware - Ware Junior/Senior High School",
+        "district": "Ware",
+        "isBps": false,
+        "fafsaPct": 46.05263157894737,
+        "collegeAttendancePct": 38.5,
+        "lowIncomePct": 56.0,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "03100505",
+        "schoolName": "Wareham - Wareham Senior High",
+        "district": "Wareham",
+        "isBps": false,
+        "fafsaPct": 58.44155844155844,
+        "collegeAttendancePct": 43.8,
+        "lowIncomePct": 63.4,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "03140505",
+        "schoolName": "Watertown - Watertown High",
+        "district": "Watertown",
+        "isBps": false,
+        "fafsaPct": 59.0,
+        "collegeAttendancePct": 60.0,
+        "lowIncomePct": 43.5,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "03150505",
+        "schoolName": "Wayland - Wayland High School",
+        "district": "Wayland",
+        "isBps": false,
+        "fafsaPct": 65.89861751152074,
+        "collegeAttendancePct": 82.2,
+        "lowIncomePct": 8.3,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "03160505",
+        "schoolName": "Webster - Bartlett High School",
+        "district": "Webster",
+        "isBps": false,
+        "fafsaPct": 50.0,
+        "collegeAttendancePct": 46.4,
+        "lowIncomePct": 69.1,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "03170505",
+        "schoolName": "Wellesley - Wellesley Sr High",
+        "district": "Wellesley",
+        "isBps": false,
+        "fafsaPct": 45.59270516717325,
+        "collegeAttendancePct": 79.9,
+        "lowIncomePct": 8.6,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "03210505",
+        "schoolName": "Westborough - Westborough High",
+        "district": "Westborough",
+        "isBps": false,
+        "fafsaPct": 66.97247706422019,
+        "collegeAttendancePct": 83.0,
+        "lowIncomePct": 16.1,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "03220505",
+        "schoolName": "West Boylston - West Boylston Junior/Senior High",
+        "district": "West Boylston",
+        "isBps": false,
+        "fafsaPct": 69.23076923076923,
+        "collegeAttendancePct": 64.2,
+        "lowIncomePct": 31.2,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "03230505",
+        "schoolName": "West Bridgewater - West Bridgewater Junior/Senior",
+        "district": "West Bridgewater",
+        "isBps": false,
+        "fafsaPct": 63.91752577319587,
+        "collegeAttendancePct": 67.0,
+        "lowIncomePct": 23.6,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "03250505",
+        "schoolName": "Westfield - Westfield High",
+        "district": "Westfield",
+        "isBps": false,
+        "fafsaPct": 57.45454545454546,
+        "collegeAttendancePct": 63.0,
+        "lowIncomePct": 46.6,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "03250605",
+        "schoolName": "Westfield-Westfield Technical Academy",
+        "district": "Westfield",
+        "isBps": false,
+        "fafsaPct": 36.76470588235294,
+        "collegeAttendancePct": 35.1,
+        "lowIncomePct": 39.9,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "03260505",
+        "schoolName": "Westford - Westford Academy",
+        "district": "Westford",
+        "isBps": false,
+        "fafsaPct": 77.3841961852861,
+        "collegeAttendancePct": 87.5,
+        "lowIncomePct": 6.7,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "03300505",
+        "schoolName": "Weston - Weston High",
+        "district": "Weston",
+        "isBps": false,
+        "fafsaPct": 37.8698224852071,
+        "collegeAttendancePct": 79.9,
+        "lowIncomePct": 8.7,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "03310515",
+        "schoolName": "Westport - Westport Middle-High School",
+        "district": "Westport",
+        "isBps": false,
+        "fafsaPct": 52.74725274725275,
+        "collegeAttendancePct": 59.3,
+        "lowIncomePct": 33.6,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "03320505",
+        "schoolName": "West Springfield - West Springfield High",
+        "district": "West Springfield",
+        "isBps": false,
+        "fafsaPct": 57.95053003533569,
+        "collegeAttendancePct": 58.4,
+        "lowIncomePct": 53.0,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "03350505",
+        "schoolName": "Westwood - Westwood High",
+        "district": "Westwood",
+        "isBps": false,
+        "fafsaPct": 68.11594202898551,
+        "collegeAttendancePct": 85.9,
+        "lowIncomePct": 8.2,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "03360505",
+        "schoolName": "Weymouth - Weymouth High School",
+        "district": "Weymouth",
+        "isBps": false,
+        "fafsaPct": 56.73076923076923,
+        "collegeAttendancePct": 56.0,
+        "lowIncomePct": 37.6,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "03420505",
+        "schoolName": "Wilmington - Wilmington High",
+        "district": "Wilmington",
+        "isBps": false,
+        "fafsaPct": 73.75886524822694,
+        "collegeAttendancePct": 74.5,
+        "lowIncomePct": 14.9,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "03430515",
+        "schoolName": "Winchendon - Murdock High School",
+        "district": "Winchendon",
+        "isBps": false,
+        "fafsaPct": 44.82758620689656,
+        "collegeAttendancePct": 42.3,
+        "lowIncomePct": 52.3,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "03440505",
+        "schoolName": "Winchester - Winchester High School",
+        "district": "Winchester",
+        "isBps": false,
+        "fafsaPct": 58.99053627760252,
+        "collegeAttendancePct": 82.3,
+        "lowIncomePct": 7.3,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "03460505",
+        "schoolName": "Winthrop - Winthrop High School",
+        "district": "Winthrop",
+        "isBps": false,
+        "fafsaPct": 62.16216216216216,
+        "collegeAttendancePct": 62.9,
+        "lowIncomePct": 35.0,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "03470505",
+        "schoolName": "Woburn - Woburn High",
+        "district": "Woburn",
+        "isBps": false,
+        "fafsaPct": 59.30232558139535,
+        "collegeAttendancePct": 65.5,
+        "lowIncomePct": 40.2,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "03480285",
+        "schoolName": "Worcester - University Pk Campus School",
+        "district": "Worcester",
+        "isBps": false,
+        "fafsaPct": 71.42857142857143,
+        "collegeAttendancePct": 57.1,
+        "lowIncomePct": 80.3,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "03480350",
+        "schoolName": "Worcester - Claremont Academy",
+        "district": "Worcester",
+        "isBps": false,
+        "fafsaPct": 51.80722891566265,
+        "collegeAttendancePct": 34.8,
+        "lowIncomePct": 84.2,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "03480503",
+        "schoolName": "Worcester - Burncoat Senior High",
+        "district": "Worcester",
+        "isBps": false,
+        "fafsaPct": 47.65625,
+        "collegeAttendancePct": 30.7,
+        "lowIncomePct": 68.1,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "03480512",
+        "schoolName": "Worcester - Doherty Memorial High",
+        "district": "Worcester",
+        "isBps": false,
+        "fafsaPct": 64.35331230283911,
+        "collegeAttendancePct": 51.1,
+        "lowIncomePct": 59.8,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "03480515",
+        "schoolName": "Worcester - North High",
+        "district": "Worcester",
+        "isBps": false,
+        "fafsaPct": 44.0,
+        "collegeAttendancePct": 31.8,
+        "lowIncomePct": 80.7,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "03480520",
+        "schoolName": "Worcester - South High Community",
+        "district": "Worcester",
+        "isBps": false,
+        "fafsaPct": 47.72234273318873,
+        "collegeAttendancePct": 36.2,
+        "lowIncomePct": 70.8,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "03480605",
+        "schoolName": "Worcester - Worcester Technical High",
+        "district": "Worcester",
+        "isBps": false,
+        "fafsaPct": 59.67302452316077,
+        "collegeAttendancePct": 57.6,
+        "lowIncomePct": 67.1,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "04060705",
+        "schoolName": "Northampton-Smith Vocational Agricultural - Smith Vocational and Agricultural High",
+        "district": "Northampton-Smith Vocational Agricultural",
+        "isBps": false,
+        "fafsaPct": 32.16783216783217,
+        "collegeAttendancePct": 24.3,
+        "lowIncomePct": 36.8,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "04100205",
+        "schoolName": "Excel Academy Charter (District) - Excel Academy Charter School",
+        "district": "Excel Academy Charter (District)",
+        "isBps": false,
+        "fafsaPct": 84.71337579617835,
+        "collegeAttendancePct": 56.8,
+        "lowIncomePct": 63.4,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "04110305",
+        "schoolName": "Boston Green Academy Horace Mann Charter School (District) - Boston Green Academy Horace Mann Charter School",
+        "district": "Boston Green Academy Horace Mann Charter School (District)",
+        "isBps": false,
+        "fafsaPct": 51.78571428571429,
+        "collegeAttendancePct": 47.2,
+        "lowIncomePct": 80.5,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "04120530",
+        "schoolName": "Academy Of the Pacific Rim Charter Public (District) - Academy Of the Pacific Rim Charter Public School",
+        "district": "Academy Of the Pacific Rim Charter Public (District)",
+        "isBps": false,
+        "fafsaPct": 86.66666666666667,
+        "collegeAttendancePct": 51.2,
+        "lowIncomePct": 63.5,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "04130505",
+        "schoolName": "Four Rivers Charter Public (District) - Four Rivers Charter Public School",
+        "district": "Four Rivers Charter Public (District)",
+        "isBps": false,
+        "fafsaPct": 67.64705882352942,
+        "collegeAttendancePct": 61.8,
+        "lowIncomePct": 32.9,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "04140305",
+        "schoolName": "Berkshire Arts and Technology Charter Public (District) - Berkshire Arts and Technology Charter Public School",
+        "district": "Berkshire Arts and Technology Charter Public (District)",
+        "isBps": false,
+        "fafsaPct": 64.28571428571429,
+        "collegeAttendancePct": 66.7,
+        "lowIncomePct": 56.3,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "04160305",
+        "schoolName": "Boston Preparatory Charter Public (District) - Boston Preparatory Charter Public School",
+        "district": "Boston Preparatory Charter Public (District)",
+        "isBps": false,
+        "fafsaPct": 88.75,
+        "collegeAttendancePct": 73.7,
+        "lowIncomePct": 65.3,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "04240505",
+        "schoolName": "Boston Day and Evening Academy Charter (District)-Boston Day and Evening Academy Charter School",
+        "district": "Boston Day and Evening Academy Charter (District)",
+        "isBps": false,
+        "fafsaPct": 8.4,
+        "collegeAttendancePct": 19.2,
+        "lowIncomePct": 78.6,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "04280305",
+        "schoolName": "Brooke Charter School (District) - Brooke Charter School",
+        "district": "Brooke Charter School (District)",
+        "isBps": false,
+        "fafsaPct": 81.1881188118812,
+        "collegeAttendancePct": 77.6,
+        "lowIncomePct": 61.2,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "04290010",
+        "schoolName": "KIPP Academy Lynn Charter (District) - KIPP Academy Lynn Charter School",
+        "district": "KIPP Academy Lynn Charter (District)",
+        "isBps": false,
+        "fafsaPct": 95.16129032258064,
+        "collegeAttendancePct": 75.8,
+        "lowIncomePct": 64.7,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "04300305",
+        "schoolName": "Advanced Math and Science Academy Charter (District) - Advanced Math and Science Academy Charter School",
+        "district": "Advanced Math and Science Academy Charter (District)",
+        "isBps": false,
+        "fafsaPct": 80.31496062992126,
+        "collegeAttendancePct": 84.0,
+        "lowIncomePct": 17.9,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "04350305",
+        "schoolName": "Innovation Academy Charter (District) - Innovation Academy Charter School",
+        "district": "Innovation Academy Charter (District)",
+        "isBps": false,
+        "fafsaPct": 67.36842105263158,
+        "collegeAttendancePct": 77.4,
+        "lowIncomePct": 31.0,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "04360305",
+        "schoolName": "Community Charter School of Cambridge (District) - Community Charter School of Cambridge",
+        "district": "Community Charter School of Cambridge (District)",
+        "isBps": false,
+        "fafsaPct": 86.11111111111111,
+        "collegeAttendancePct": 67.6,
+        "lowIncomePct": 56.2,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "04380505",
+        "schoolName": "Codman Academy Charter Public (District) - Codman Academy Charter Public School",
+        "district": "Codman Academy Charter Public (District)",
+        "isBps": false,
+        "fafsaPct": 74.28571428571429,
+        "collegeAttendancePct": 54.5,
+        "lowIncomePct": 80.5,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "04440205",
+        "schoolName": "Neighborhood House Charter (District) - Neighborhood House Charter School",
+        "district": "Neighborhood House Charter (District)",
+        "isBps": false,
+        "fafsaPct": 66.66666666666666,
+        "collegeAttendancePct": 61.4,
+        "lowIncomePct": 63.9,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "04450105",
+        "schoolName": "Abby Kelley Foster Charter Public (District)-Abby Kelley Foster Charter Public School",
+        "district": "Abby Kelley Foster Charter Public (District)",
+        "isBps": false,
+        "fafsaPct": 84.21052631578947,
+        "collegeAttendancePct": 78.9,
+        "lowIncomePct": 57.9,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "04460550",
+        "schoolName": "Foxborough Regional Charter (District) - Foxborough Regional Charter School",
+        "district": "Foxborough Regional Charter (District)",
+        "isBps": false,
+        "fafsaPct": 72.09302325581395,
+        "collegeAttendancePct": 71.4,
+        "lowIncomePct": 47.2,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "04490305",
+        "schoolName": "Boston Collegiate Charter (District) - Boston Collegiate Charter School",
+        "district": "Boston Collegiate Charter (District)",
+        "isBps": false,
+        "fafsaPct": 76.82926829268293,
+        "collegeAttendancePct": 73.1,
+        "lowIncomePct": 41.8,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "04680505",
+        "schoolName": "Ma Academy for Math and Science - Ma Academy for Math and Science School",
+        "district": "Ma Academy for Math and Science",
+        "isBps": false,
+        "fafsaPct": 77.55102040816327,
+        "collegeAttendancePct": 87.8,
+        "lowIncomePct": 5.1,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "04690505",
+        "schoolName": "Match Charter Public School (District) - Match Charter Public School",
+        "district": "Match Charter Public School (District)",
+        "isBps": false,
+        "fafsaPct": 92.72727272727272,
+        "collegeAttendancePct": 63.0,
+        "lowIncomePct": 70.6,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "04700105",
+        "schoolName": "Mystic Valley Regional Charter (District)-Mystic Valley Regional Charter School",
+        "district": "Mystic Valley Regional Charter (District)",
+        "isBps": false,
+        "fafsaPct": 91.78082191780824,
+        "collegeAttendancePct": 84.9,
+        "lowIncomePct": 30.6,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "04740505",
+        "schoolName": "Sizer School: A North Central Charter Essential (District) - Sizer School: A North Central Charter Essential School",
+        "district": "Sizer School: A North Central Charter Essential (District)",
+        "isBps": false,
+        "fafsaPct": 35.13513513513514,
+        "collegeAttendancePct": 55.6,
+        "lowIncomePct": 52.5,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "04780505",
+        "schoolName": "Francis W. Parker Charter Essential (District) - Francis W. Parker Charter Essential School",
+        "district": "Francis W. Parker Charter Essential (District)",
+        "isBps": false,
+        "fafsaPct": 87.5,
+        "collegeAttendancePct": 71.4,
+        "lowIncomePct": 12.9,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "04790505",
+        "schoolName": "Pioneer Valley Performing Arts Charter Public (District) - Pioneer Valley Performing Arts Charter Public School",
+        "district": "Pioneer Valley Performing Arts Charter Public (District)",
+        "isBps": false,
+        "fafsaPct": 65.15151515151516,
+        "collegeAttendancePct": 61.5,
+        "lowIncomePct": 38.3,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "04830305",
+        "schoolName": "Rising Tide Charter Public (District) - Rising Tide Charter Public School",
+        "district": "Rising Tide Charter Public (District)",
+        "isBps": false,
+        "fafsaPct": 74.07407407407408,
+        "collegeAttendancePct": 67.9,
+        "lowIncomePct": 26.1,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "04840505",
+        "schoolName": "Roxbury Preparatory Charter (District) - Roxbury Preparatory Charter School",
+        "district": "Roxbury Preparatory Charter (District)",
+        "isBps": false,
+        "fafsaPct": 83.65384615384616,
+        "collegeAttendancePct": 61.8,
+        "lowIncomePct": 77.9,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "04850485",
+        "schoolName": "Salem Academy Charter (District) - Salem Academy Charter School",
+        "district": "Salem Academy Charter (District)",
+        "isBps": false,
+        "fafsaPct": 94.02985074626866,
+        "collegeAttendancePct": 72.3,
+        "lowIncomePct": 54.2,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "04870550",
+        "schoolName": "Prospect Hill Academy Charter (District) - Prospect Hill Academy Charter School",
+        "district": "Prospect Hill Academy Charter (District)",
+        "isBps": false,
+        "fafsaPct": 85.24590163934425,
+        "collegeAttendancePct": 80.7,
+        "lowIncomePct": 57.3,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "04880550",
+        "schoolName": "South Shore Charter Public (District) - South Shore Charter Public School",
+        "district": "South Shore Charter Public (District)",
+        "isBps": false,
+        "fafsaPct": 75.32467532467533,
+        "collegeAttendancePct": 59.2,
+        "lowIncomePct": 34.7,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "04910550",
+        "schoolName": "Atlantis Charter (District) - Atlantis Charter School",
+        "district": "Atlantis Charter (District)",
+        "isBps": false,
+        "fafsaPct": 36.70886075949367,
+        "collegeAttendancePct": 52.6,
+        "lowIncomePct": 58.3,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "04940205",
+        "schoolName": "Pioneer Charter School of Science (District) - Pioneer Charter School of Science",
+        "district": "Pioneer Charter School of Science (District)",
+        "isBps": false,
+        "fafsaPct": 88.67924528301887,
+        "collegeAttendancePct": 67.9,
+        "lowIncomePct": 47.3,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "04960305",
+        "schoolName": "Global Learning Charter Public (District) - Global Learning Charter Public School",
+        "district": "Global Learning Charter Public (District)",
+        "isBps": false,
+        "fafsaPct": 64.1025641025641,
+        "collegeAttendancePct": 45.9,
+        "lowIncomePct": 72.0,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "04970205",
+        "schoolName": "Pioneer Valley Chinese Immersion Charter (District) - Pioneer Valley Chinese Immersion Charter School",
+        "district": "Pioneer Valley Chinese Immersion Charter (District)",
+        "isBps": false,
+        "fafsaPct": 71.42857142857143,
+        "collegeAttendancePct": 76.5,
+        "lowIncomePct": 17.6,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "04990305",
+        "schoolName": "Hampden Charter School of Science (District) - Hampden Charter School of Science",
+        "district": "Hampden Charter School of Science (District)",
+        "isBps": false,
+        "fafsaPct": 75.67567567567568,
+        "collegeAttendancePct": 71.2,
+        "lowIncomePct": 57.6,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "06000505",
+        "schoolName": "Acton-Boxborough - Acton-Boxborough Regional High",
+        "district": "Acton-Boxborough",
+        "isBps": false,
+        "fafsaPct": 68.42105263157895,
+        "collegeAttendancePct": 83.2,
+        "lowIncomePct": 10.9,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "06030505",
+        "schoolName": "Hoosac Valley Regional - Hoosac Valley High School",
+        "district": "Hoosac Valley Regional",
+        "isBps": false,
+        "fafsaPct": 57.77777777777777,
+        "collegeAttendancePct": 46.7,
+        "lowIncomePct": 54.7,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "06050505",
+        "schoolName": "Amherst-Pelham - Amherst Regional High",
+        "district": "Amherst-Pelham",
+        "isBps": false,
+        "fafsaPct": 69.84126984126983,
+        "collegeAttendancePct": 64.9,
+        "lowIncomePct": 31.1,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "06100505",
+        "schoolName": "Ashburnham-Westminster - Oakmont Regional High School",
+        "district": "Ashburnham-Westminster",
+        "isBps": false,
+        "fafsaPct": 72.36842105263158,
+        "collegeAttendancePct": 73.3,
+        "lowIncomePct": 23.2,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "06150505",
+        "schoolName": "Athol-Royalston - Athol High",
+        "district": "Athol-Royalston",
+        "isBps": false,
+        "fafsaPct": 47.22222222222222,
+        "collegeAttendancePct": 39.0,
+        "lowIncomePct": 57.8,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "06160505",
+        "schoolName": "Ayer Shirley School District - Ayer Shirley Regional High School",
+        "district": "Ayer Shirley School District",
+        "isBps": false,
+        "fafsaPct": 68.64406779661016,
+        "collegeAttendancePct": 70.7,
+        "lowIncomePct": 28.5,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "06180505",
+        "schoolName": "Berkshire Hills - Monument Mt Regional High",
+        "district": "Berkshire Hills",
+        "isBps": false,
+        "fafsaPct": 47.40740740740741,
+        "collegeAttendancePct": 52.7,
+        "lowIncomePct": 41.8,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "06200505",
+        "schoolName": "Berlin-Boylston - Tahanto Regional High",
+        "district": "Berlin-Boylston",
+        "isBps": false,
+        "fafsaPct": 81.35593220338984,
+        "collegeAttendancePct": 78.0,
+        "lowIncomePct": 15.3,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "06220505",
+        "schoolName": "Blackstone-Millville - Blackstone Millville RHS",
+        "district": "Blackstone-Millville",
+        "isBps": false,
+        "fafsaPct": 47.77777777777778,
+        "collegeAttendancePct": 41.3,
+        "lowIncomePct": 35.2,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "06250505",
+        "schoolName": "Bridgewater-Raynham - Bridgewater-Raynham Regional",
+        "district": "Bridgewater-Raynham",
+        "isBps": false,
+        "fafsaPct": 64.73551637279597,
+        "collegeAttendancePct": 67.3,
+        "lowIncomePct": 29.5,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "06350505",
+        "schoolName": "Central Berkshire - Wahconah Regional High",
+        "district": "Central Berkshire",
+        "isBps": false,
+        "fafsaPct": 67.52136752136752,
+        "collegeAttendancePct": 64.9,
+        "lowIncomePct": 36.0,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "06400505",
+        "schoolName": "Concord-Carlisle - Concord Carlisle High",
+        "district": "Concord-Carlisle",
+        "isBps": false,
+        "fafsaPct": 54.98392282958199,
+        "collegeAttendancePct": 75.3,
+        "lowIncomePct": 9.4,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "06450505",
+        "schoolName": "Dennis-Yarmouth - Dennis-Yarmouth Regional High",
+        "district": "Dennis-Yarmouth",
+        "isBps": false,
+        "fafsaPct": 60.65573770491803,
+        "collegeAttendancePct": 65.5,
+        "lowIncomePct": 52.3,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "06500505",
+        "schoolName": "Dighton-Rehoboth - Dighton-Rehoboth Regional High School",
+        "district": "Dighton-Rehoboth",
+        "isBps": false,
+        "fafsaPct": 59.76331360946746,
+        "collegeAttendancePct": 71.9,
+        "lowIncomePct": 20.9,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "06550505",
+        "schoolName": "Dover-Sherborn - Dover-Sherborn Regional High",
+        "district": "Dover-Sherborn",
+        "isBps": false,
+        "fafsaPct": 49.34210526315789,
+        "collegeAttendancePct": 77.8,
+        "lowIncomePct": 5.9,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "06580505",
+        "schoolName": "Dudley-Charlton Reg - Shepherd Hill Regional High",
+        "district": "Dudley-Charlton Reg",
+        "isBps": false,
+        "fafsaPct": 61.25654450261781,
+        "collegeAttendancePct": 63.3,
+        "lowIncomePct": 33.1,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "06600505",
+        "schoolName": "Nauset - Nauset Regional High",
+        "district": "Nauset",
+        "isBps": false,
+        "fafsaPct": 73.39901477832512,
+        "collegeAttendancePct": 77.0,
+        "lowIncomePct": 27.4,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "06650505",
+        "schoolName": "Freetown-Lakeville - Apponequet Regional High",
+        "district": "Freetown-Lakeville",
+        "isBps": false,
+        "fafsaPct": 62.94117647058823,
+        "collegeAttendancePct": 72.8,
+        "lowIncomePct": 19.8,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "06700505",
+        "schoolName": "Frontier - Frontier Regional",
+        "district": "Frontier",
+        "isBps": false,
+        "fafsaPct": 65.21739130434783,
+        "collegeAttendancePct": 68.9,
+        "lowIncomePct": 21.6,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "06720505",
+        "schoolName": "Gateway - Gateway Regional School",
+        "district": "Gateway",
+        "isBps": false,
+        "fafsaPct": 55.17241379310344,
+        "collegeAttendancePct": 26.7,
+        "lowIncomePct": 43.2,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "06730505",
+        "schoolName": "Groton-Dunstable - Groton Dunstable Regional",
+        "district": "Groton-Dunstable",
+        "isBps": false,
+        "fafsaPct": 75.15151515151514,
+        "collegeAttendancePct": 87.4,
+        "lowIncomePct": 9.9,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "06740505",
+        "schoolName": "Gill-Montague - Turners Fall High",
+        "district": "Gill-Montague",
+        "isBps": false,
+        "fafsaPct": 38.29787234042553,
+        "collegeAttendancePct": 30.2,
+        "lowIncomePct": 59.8,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "06750505",
+        "schoolName": "Hamilton-Wenham - Hamilton-Wenham Regional High",
+        "district": "Hamilton-Wenham",
+        "isBps": false,
+        "fafsaPct": 64.81481481481481,
+        "collegeAttendancePct": 79.6,
+        "lowIncomePct": 8.7,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "06800505",
+        "schoolName": "Hampden-Wilbraham - Minnechaug Regional High",
+        "district": "Hampden-Wilbraham",
+        "isBps": false,
+        "fafsaPct": 69.29460580912863,
+        "collegeAttendancePct": 74.4,
+        "lowIncomePct": 25.3,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "06830505",
+        "schoolName": "Hampshire - Hampshire Regional High",
+        "district": "Hampshire",
+        "isBps": false,
+        "fafsaPct": 68.36734693877551,
+        "collegeAttendancePct": 72.9,
+        "lowIncomePct": 19.9,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "06900505",
+        "schoolName": "King Philip - King Philip Regional High",
+        "district": "King Philip",
+        "isBps": false,
+        "fafsaPct": 65.80882352941177,
+        "collegeAttendancePct": 74.3,
+        "lowIncomePct": 17.2,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "06950505",
+        "schoolName": "Lincoln-Sudbury - Lincoln-Sudbury Regional High",
+        "district": "Lincoln-Sudbury",
+        "isBps": false,
+        "fafsaPct": 68.40731070496084,
+        "collegeAttendancePct": 84.0,
+        "lowIncomePct": 9.1,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "06980510",
+        "schoolName": "Manchester Essex Regional - Manchester Essex Regional High School",
+        "district": "Manchester Essex Regional",
+        "isBps": false,
+        "fafsaPct": 58.92857142857143,
+        "collegeAttendancePct": 78.4,
+        "lowIncomePct": 14.3,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "07000505",
+        "schoolName": "Martha's Vineyard - Martha's Vineyard Regional High",
+        "district": "Martha's Vineyard",
+        "isBps": false,
+        "fafsaPct": 65.81632653061224,
+        "collegeAttendancePct": 56.7,
+        "lowIncomePct": 35.8,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "07050505",
+        "schoolName": "Masconomet - Masconomet Regional High School",
+        "district": "Masconomet",
+        "isBps": false,
+        "fafsaPct": 69.76744186046511,
+        "collegeAttendancePct": 77.0,
+        "lowIncomePct": 8.5,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "07100510",
+        "schoolName": "Mendon-Upton - Nipmuc Regional High",
+        "district": "Mendon-Upton",
+        "isBps": false,
+        "fafsaPct": 76.0,
+        "collegeAttendancePct": 76.8,
+        "lowIncomePct": 15.9,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "07120515",
+        "schoolName": "Monomoy Regional School District - Monomoy Regional High School",
+        "district": "Monomoy Regional School District",
+        "isBps": false,
+        "fafsaPct": 68.15286624203821,
+        "collegeAttendancePct": 76.5,
+        "lowIncomePct": 35.4,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "07150505",
+        "schoolName": "Mount Greylock - Mt Greylock Regional High",
+        "district": "Mount Greylock",
+        "isBps": false,
+        "fafsaPct": 79.41176470588235,
+        "collegeAttendancePct": 75.4,
+        "lowIncomePct": 20.6,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "07170505",
+        "schoolName": "Mohawk Trail - Mohawk Trail Regional School",
+        "district": "Mohawk Trail",
+        "isBps": false,
+        "fafsaPct": 67.64705882352942,
+        "collegeAttendancePct": 59.5,
+        "lowIncomePct": 44.9,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "07200505",
+        "schoolName": "Narragansett - Narragansett Regional High",
+        "district": "Narragansett",
+        "isBps": false,
+        "fafsaPct": 57.14285714285714,
+        "collegeAttendancePct": 61.6,
+        "lowIncomePct": 34.8,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "07250505",
+        "schoolName": "Nashoba - Nashoba Regional",
+        "district": "Nashoba",
+        "isBps": false,
+        "fafsaPct": 74.24242424242425,
+        "collegeAttendancePct": 77.9,
+        "lowIncomePct": 12.4,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "07300505",
+        "schoolName": "Northboro-Southboro - Algonquin Regional High",
+        "district": "Northboro-Southboro",
+        "isBps": false,
+        "fafsaPct": 63.60544217687075,
+        "collegeAttendancePct": 81.4,
+        "lowIncomePct": 12.2,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "07350505",
+        "schoolName": "North Middlesex - North Middlesex Regional",
+        "district": "North Middlesex",
+        "isBps": false,
+        "fafsaPct": 63.81909547738693,
+        "collegeAttendancePct": 70.7,
+        "lowIncomePct": 23.5,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "07400505",
+        "schoolName": "Old Rochester - Old Rochester Regional High",
+        "district": "Old Rochester",
+        "isBps": false,
+        "fafsaPct": 73.02631578947368,
+        "collegeAttendancePct": 74.0,
+        "lowIncomePct": 21.5,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "07450505",
+        "schoolName": "Pentucket - Pentucket Regional Sr High",
+        "district": "Pentucket",
+        "isBps": false,
+        "fafsaPct": 66.22516556291392,
+        "collegeAttendancePct": 60.4,
+        "lowIncomePct": 16.4,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "07500505",
+        "schoolName": "Pioneer Valley - Pioneer Valley Regional",
+        "district": "Pioneer Valley",
+        "isBps": false,
+        "fafsaPct": 66.66666666666666,
+        "collegeAttendancePct": 77.8,
+        "lowIncomePct": 30.1,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "07530505",
+        "schoolName": "Quabbin - Quabbin Regional High School",
+        "district": "Quabbin",
+        "isBps": false,
+        "fafsaPct": 57.4074074074074,
+        "collegeAttendancePct": 65.4,
+        "lowIncomePct": 31.7,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "07550505",
+        "schoolName": "Ralph C Mahar - Ralph C Mahar Regional",
+        "district": "Ralph C Mahar",
+        "isBps": false,
+        "fafsaPct": 46.875,
+        "collegeAttendancePct": 50.7,
+        "lowIncomePct": 58.5,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "07600505",
+        "schoolName": "Silver Lake - Silver Lake Regional High",
+        "district": "Silver Lake",
+        "isBps": false,
+        "fafsaPct": 67.45098039215686,
+        "collegeAttendancePct": 74.0,
+        "lowIncomePct": 22.2,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "07630505",
+        "schoolName": "Somerset Berkley Regional School District - Somerset Berkley Regional High School",
+        "district": "Somerset Berkley Regional School District",
+        "isBps": false,
+        "fafsaPct": 63.55140186915887,
+        "collegeAttendancePct": 66.5,
+        "lowIncomePct": 26.3,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "07650505",
+        "schoolName": "Southern Berkshire - Mt Everett Regional",
+        "district": "Southern Berkshire",
+        "isBps": false,
+        "fafsaPct": 71.05263157894737,
+        "collegeAttendancePct": 67.6,
+        "lowIncomePct": 38.1,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "07660505",
+        "schoolName": "Southwick-Tolland-Granville Regional School District - Southwick Regional School",
+        "district": "Southwick-Tolland-Granville Regional School District",
+        "isBps": false,
+        "fafsaPct": 65.88235294117646,
+        "collegeAttendancePct": 72.8,
+        "lowIncomePct": 32.3,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "07670505",
+        "schoolName": "Spencer-E Brookfield - David Prouty High",
+        "district": "Spencer-E Brookfield",
+        "isBps": false,
+        "fafsaPct": 47.45762711864407,
+        "collegeAttendancePct": 48.3,
+        "lowIncomePct": 47.1,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "07700505",
+        "schoolName": "Tantasqua - Tantasqua Regional Sr High",
+        "district": "Tantasqua",
+        "isBps": false,
+        "fafsaPct": 76.10062893081762,
+        "collegeAttendancePct": 73.7,
+        "lowIncomePct": 23.4,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "07700605",
+        "schoolName": "Tantasqua - Tantasqua Regional Vocational",
+        "district": "Tantasqua",
+        "isBps": false,
+        "fafsaPct": 21.25984251968504,
+        "collegeAttendancePct": 36.1,
+        "lowIncomePct": 29.5,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "07730505",
+        "schoolName": "Triton - Triton Regional High School",
+        "district": "Triton",
+        "isBps": false,
+        "fafsaPct": 67.13286713286713,
+        "collegeAttendancePct": 60.4,
+        "lowIncomePct": 27.0,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "07750505",
+        "schoolName": "Wachusett - Wachusett Regional High",
+        "district": "Wachusett",
+        "isBps": false,
+        "fafsaPct": 72.09302325581395,
+        "collegeAttendancePct": 79.4,
+        "lowIncomePct": 16.0,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "07780505",
+        "schoolName": "Quaboag Regional - Quaboag Regional High",
+        "district": "Quaboag Regional",
+        "isBps": false,
+        "fafsaPct": 53.33333333333334,
+        "collegeAttendancePct": 52.6,
+        "lowIncomePct": 41.3,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "07800505",
+        "schoolName": "Whitman-Hanson - Whitman Hanson Regional",
+        "district": "Whitman-Hanson",
+        "isBps": false,
+        "fafsaPct": 61.88679245283019,
+        "collegeAttendancePct": 68.3,
+        "lowIncomePct": 29.2,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "08010605",
+        "schoolName": "Assabet Valley Regional Vocational Technical - Assabet Valley Vocational High School",
+        "district": "Assabet Valley Regional Vocational Technical",
+        "isBps": false,
+        "fafsaPct": 39.48339483394834,
+        "collegeAttendancePct": 39.5,
+        "lowIncomePct": 44.1,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "08050605",
+        "schoolName": "Blackstone Valley Regional Vocational Technical - Blackstone Valley",
+        "district": "Blackstone Valley Regional Vocational Technical",
+        "isBps": false,
+        "fafsaPct": 62.53968253968254,
+        "collegeAttendancePct": 62.7,
+        "lowIncomePct": 18.3,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "08060605",
+        "schoolName": "Blue Hills Regional Vocational Technical - Blue Hills Regional Vocational Technical",
+        "district": "Blue Hills Regional Vocational Technical",
+        "isBps": false,
+        "fafsaPct": 62.5,
+        "collegeAttendancePct": 62.8,
+        "lowIncomePct": 35.3,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "08100605",
+        "schoolName": "Bristol-Plymouth Regional Vocational Technical - Bristol-Plymouth Vocational Technical",
+        "district": "Bristol-Plymouth Regional Vocational Technical",
+        "isBps": false,
+        "fafsaPct": 44.55128205128205,
+        "collegeAttendancePct": 42.1,
+        "lowIncomePct": 27.0,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "08150605",
+        "schoolName": "Cape Cod Regional Vocational Technical - Cape Cod Region Vocational Technical",
+        "district": "Cape Cod Regional Vocational Technical",
+        "isBps": false,
+        "fafsaPct": 50.625,
+        "collegeAttendancePct": 49.7,
+        "lowIncomePct": 35.3,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "08170505",
+        "schoolName": "Essex North Shore Agricultural and Technical School District - Essex North Shore Agricultural and Technical School",
+        "district": "Essex North Shore Agricultural and Technical School District",
+        "isBps": false,
+        "fafsaPct": 64.9164677804296,
+        "collegeAttendancePct": 60.4,
+        "lowIncomePct": 24.9,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "08180605",
+        "schoolName": "Franklin County Regional Vocational Technical - Franklin County Technical",
+        "district": "Franklin County Regional Vocational Technical",
+        "isBps": false,
+        "fafsaPct": 27.56410256410257,
+        "collegeAttendancePct": 31.3,
+        "lowIncomePct": 39.5,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "08210605",
+        "schoolName": "Greater Fall River Regional Vocational Technical - Diman Regional Vocational Technical High",
+        "district": "Greater Fall River Regional Vocational Technical",
+        "isBps": false,
+        "fafsaPct": 50.42253521126761,
+        "collegeAttendancePct": 50.9,
+        "lowIncomePct": 43.5,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "08230605",
+        "schoolName": "Greater Lawrence Regional Vocational Technical-Gr Lawrence Regional Vocational Technical",
+        "district": "Greater Lawrence Regional Vocational Technical",
+        "isBps": false,
+        "fafsaPct": 50.11709601873536,
+        "collegeAttendancePct": 35.6,
+        "lowIncomePct": 63.0,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "08250605",
+        "schoolName": "Greater New Bedford Regional Vocational Technical - Gr New Bedford Vocational Technical",
+        "district": "Greater New Bedford Regional Vocational Technical",
+        "isBps": false,
+        "fafsaPct": 50.09823182711198,
+        "collegeAttendancePct": 50.5,
+        "lowIncomePct": 50.3,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "08280605",
+        "schoolName": "Greater Lowell Regional Vocational Technical - Gr Lowell Regional Vocational Technical",
+        "district": "Greater Lowell Regional Vocational Technical",
+        "isBps": false,
+        "fafsaPct": 43.7609841827768,
+        "collegeAttendancePct": 46.2,
+        "lowIncomePct": 44.3,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "08290605",
+        "schoolName": "South Middlesex Regional Vocational Technical - Joseph P Keefe Technical High School",
+        "district": "South Middlesex Regional Vocational Technical",
+        "isBps": false,
+        "fafsaPct": 43.56435643564357,
+        "collegeAttendancePct": 41.1,
+        "lowIncomePct": 52.0,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "08300605",
+        "schoolName": "Minuteman Regional Vocational Technical - Minuteman Regional High",
+        "district": "Minuteman Regional Vocational Technical",
+        "isBps": false,
+        "fafsaPct": 58.52272727272727,
+        "collegeAttendancePct": 59.5,
+        "lowIncomePct": 20.8,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "08320605",
+        "schoolName": "Montachusett Regional Vocational Technical - Montachusett Regional Vocational Technical",
+        "district": "Montachusett Regional Vocational Technical",
+        "isBps": false,
+        "fafsaPct": 50.72463768115942,
+        "collegeAttendancePct": 49.1,
+        "lowIncomePct": 27.7,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "08510605",
+        "schoolName": "Northern Berkshire Regional Vocational Technical - Charles McCann Vocational Technical",
+        "district": "Northern Berkshire Regional Vocational Technical",
+        "isBps": false,
+        "fafsaPct": 33.33333333333333,
+        "collegeAttendancePct": 37.9,
+        "lowIncomePct": 40.5,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "08520605",
+        "schoolName": "Nashoba Valley Regional Vocational Technical - Nashoba Valley Technical High School",
+        "district": "Nashoba Valley Regional Vocational Technical",
+        "isBps": false,
+        "fafsaPct": 35.71428571428572,
+        "collegeAttendancePct": 42.4,
+        "lowIncomePct": 30.1,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "08530605",
+        "schoolName": "Northeast Metropolitan Regional Vocational Technical - Northeast Metro Regional Vocational",
+        "district": "Northeast Metropolitan Regional Vocational Technical",
+        "isBps": false,
+        "fafsaPct": 42.40506329113924,
+        "collegeAttendancePct": 37.3,
+        "lowIncomePct": 49.5,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "08550605",
+        "schoolName": "Old Colony Regional Vocational Technical - Old Colony Regional Vocational Technical",
+        "district": "Old Colony Regional Vocational Technical",
+        "isBps": false,
+        "fafsaPct": 51.90839694656488,
+        "collegeAttendancePct": 52.7,
+        "lowIncomePct": 21.1,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "08600605",
+        "schoolName": "Pathfinder Regional Vocational Technical - Pathfinder Vocational Technical",
+        "district": "Pathfinder Regional Vocational Technical",
+        "isBps": false,
+        "fafsaPct": 28.27586206896552,
+        "collegeAttendancePct": 27.3,
+        "lowIncomePct": 39.1,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "08710605",
+        "schoolName": "Shawsheen Valley Regional Vocational Technical-Shawsheen Valley Vocational Technical High School",
+        "district": "Shawsheen Valley Regional Vocational Technical",
+        "isBps": false,
+        "fafsaPct": 43.7888198757764,
+        "collegeAttendancePct": 48.1,
+        "lowIncomePct": 24.6,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "08720605",
+        "schoolName": "Southeastern Regional Vocational Technical - Southeastern Regional Vocational Technical",
+        "district": "Southeastern Regional Vocational Technical",
+        "isBps": false,
+        "fafsaPct": 58.13953488372093,
+        "collegeAttendancePct": 51.9,
+        "lowIncomePct": 43.2,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "08730605",
+        "schoolName": "South Shore Regional Vocational Technical - South Shore Vocational Technical High",
+        "district": "South Shore Regional Vocational Technical",
+        "isBps": false,
+        "fafsaPct": 33.54037267080746,
+        "collegeAttendancePct": 41.0,
+        "lowIncomePct": 27.0,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "08760605",
+        "schoolName": "Southern Worcester County Regional Vocational School District - Bay Path Regional Vocational Technical High School",
+        "district": "Southern Worcester County Regional Vocational School District",
+        "isBps": false,
+        "fafsaPct": 48.6013986013986,
+        "collegeAttendancePct": 47.0,
+        "lowIncomePct": 31.7,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "08780605",
+        "schoolName": "Tri-County Regional Vocational Technical - Tri-County Regional Vocational Technical",
+        "district": "Tri-County Regional Vocational Technical",
+        "isBps": false,
+        "fafsaPct": 46.42857142857143,
+        "collegeAttendancePct": 41.2,
+        "lowIncomePct": 24.3,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "08790605",
+        "schoolName": "Upper Cape Cod Regional Vocational Technical - Upper Cape Cod Vocational Technical",
+        "district": "Upper Cape Cod Regional Vocational Technical",
+        "isBps": false,
+        "fafsaPct": 36.81318681318682,
+        "collegeAttendancePct": 38.7,
+        "lowIncomePct": 37.9,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "08850605",
+        "schoolName": "Whittier Regional Vocational Technical - Whittier Regional Vocational",
+        "district": "Whittier Regional Vocational Technical",
+        "isBps": false,
+        "fafsaPct": 39.48220064724919,
+        "collegeAttendancePct": 24.8,
+        "lowIncomePct": 36.5,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "09100705",
+        "schoolName": "Bristol County Agricultural - Bristol County Agricultural High",
+        "district": "Bristol County Agricultural",
+        "isBps": false,
+        "fafsaPct": 57.99999999999999,
+        "collegeAttendancePct": 56.1,
+        "lowIncomePct": 27.9,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "09150705",
+        "schoolName": "Norfolk County Agricultural-Norfolk County Agricultural",
+        "district": "Norfolk County Agricultural",
+        "isBps": false,
+        "fafsaPct": 68.4931506849315,
+        "collegeAttendancePct": 64.8,
+        "lowIncomePct": 21.9,
+        "ses3": 3
+      },
+      {
+        "schoolCode": "35020405",
+        "schoolName": "Baystate Academy Charter Public School (District) - Baystate Academy Charter Public School",
+        "district": "Baystate Academy Charter Public School (District)",
+        "isBps": false,
+        "fafsaPct": 85.0,
+        "collegeAttendancePct": 66.7,
+        "lowIncomePct": 83.5,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "35030205",
+        "schoolName": "Collegiate Charter School of Lowell (District) - Collegiate Charter School of Lowell",
+        "district": "Collegiate Charter School of Lowell (District)",
+        "isBps": false,
+        "fafsaPct": 62.0,
+        "collegeAttendancePct": 60.4,
+        "lowIncomePct": 63.0,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "35060505",
+        "schoolName": "Pioneer Charter School of Science II (District) - Pioneer Charter School of Science II",
+        "district": "Pioneer Charter School of Science II (District)",
+        "isBps": false,
+        "fafsaPct": 90.69767441860463,
+        "collegeAttendancePct": 81.4,
+        "lowIncomePct": 42.7,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "35090305",
+        "schoolName": "Argosy Collegiate Charter School (District)-Argosy Collegiate Charter School",
+        "district": "Argosy Collegiate Charter School (District)",
+        "isBps": false,
+        "fafsaPct": 70.0,
+        "collegeAttendancePct": 57.1,
+        "lowIncomePct": 70.9,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "35130305",
+        "schoolName": "New Heights Charter School of Brockton (District)-New Heights Charter School of Brockton",
+        "district": "New Heights Charter School of Brockton (District)",
+        "isBps": false,
+        "fafsaPct": 79.43925233644859,
+        "collegeAttendancePct": 81.0,
+        "lowIncomePct": 52.5,
+        "ses3": 2
+      },
+      {
+        "schoolCode": "35140305",
+        "schoolName": "Libertas Academy Charter School (District) - Libertas Academy Charter School",
+        "district": "Libertas Academy Charter School (District)",
+        "isBps": false,
+        "fafsaPct": 74.57627118644068,
+        "collegeAttendancePct": 52.6,
+        "lowIncomePct": 84.7,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "35170505",
+        "schoolName": "Map Academy Charter School (District)-Map Academy Charter School",
+        "district": "Map Academy Charter School (District)",
+        "isBps": false,
+        "fafsaPct": 11.9047619047619,
+        "collegeAttendancePct": 15.3,
+        "lowIncomePct": 63.5,
+        "ses3": 1
+      },
+      {
+        "schoolCode": "39010900",
+        "schoolName": "Greater Commonwealth Virtual District - Greater Commonwealth Virtual School",
+        "district": "Greater Commonwealth Virtual District",
+        "isBps": false,
+        "fafsaPct": 37.85714285714285,
+        "collegeAttendancePct": 41.0,
+        "lowIncomePct": 59.5,
+        "ses3": 2
+      }
+    ],
+    "pointNote": "Each point is a school. Use raw points to show the unadjusted relationship; do not superimpose the adjusted C_plus_F coefficient as a raw regression line."
+  },
+  "unadjustedVisualizationFitNewPythonCalculation": {
+    "n": 356,
+    "n_clusters": 295,
+    "df": 294,
+    "r2": 0.5594373178539315,
+    "coefficients": {
+      "_cons": {
+        "b": 8.489501388342719,
+        "se": 3.0200848365821487,
+        "ci_low": 2.545776042708443,
+        "ci_high": 14.433226733976994,
+        "p": 0.00527034398059606
+      },
+      "ma_fafsa": {
+        "b": 0.8389461031579163,
+        "se": 0.05153570884360452,
+        "ci_low": 0.737520442809375,
+        "ci_high": 0.9403717635064576,
+        "p": 6.38245019915144e-43
+      }
+    },
+    "pearson_r": 0.7479554250447894,
+    "provenance": "New independent Python OLS calculation on the valid Stage 03 FAFSA/college sample; not an additional Stata execution or the legacy H2 model."
+  },
+  "websiteMapping": {
+    "schoolCount": 407,
+    "fafsaPct": "03_school_data.csv:ma_fafsa",
+    "collegeAttendancePct": "03_school_data.csv:college_attend_pct; checked equal to original DTA",
+    "fourYearCollegePct": "DTA college_attend_pct*(college_priv_4yr_pct+college_pub_4yr_pct)/100; equals outcomeValues.ma06_college4_grad",
+    "severeAbsencePct": "DTA att_chronic_abs_20pct; equals outcomeValues.att_chronic_abs_20pct",
+    "note": "Existing JSON uses school.outcomeValues for 33 additional outcomes; collegeAttendancePct is all-college attendance and differs from fourYearCollegePct.",
+    "checks": [
+      {
+        "schools_checked": 407,
+        "fafsa_and_college_fields_match_stage03": true,
+        "school_headline_fields_match_outcomeValues": true
+      }
+    ]
+  },
+  "additionalHeadlineEvidence": [
+    {
+      "outcome": "ma06_college4_grad",
+      "websiteSchoolField": "fourYearCollegePct",
+      "websiteOutcomeValuesField": "ma06_college4_grad",
+      "definition": "Estimated four-year college attendance among all graduates, Class of 2025 by March 2026; approximate rate derived from rounded source percentages.",
+      "raw_statewide_groups": [
+        {
+          "outcome": "ma06_college4_grad",
+          "geography": "Statewide",
+          "ses_group": 1,
+          "n_eligible": 137,
+          "n_available": 114,
+          "n_common": 113,
+          "mean": 21.23567894736842,
+          "sd": 17.00323194913288,
+          "minimum": 0.0,
+          "maximum": 68.5232,
+          "outcome_label": "Estimated four-year college attendance among graduates",
+          "family": "destinations",
+          "units": "percentage points",
+          "size_control": "ma_ln912",
+          "population_note": "Class of 2025; March 2026; derived from rounded attendance and destination percentages",
+          "gate": "1",
+          "family_tests_planned": 5,
+          "n_missing": 23
+        },
+        {
+          "outcome": "ma06_college4_grad",
+          "geography": "Statewide",
+          "ses_group": 2,
+          "n_eligible": 135,
+          "n_available": 133,
+          "n_common": 133,
+          "mean": 43.47174812030075,
+          "sd": 15.19444926089988,
+          "minimum": 9.9873,
+          "maximum": 79.13879999999999,
+          "outcome_label": "Estimated four-year college attendance among graduates",
+          "family": "destinations",
+          "units": "percentage points",
+          "size_control": "ma_ln912",
+          "population_note": "Class of 2025; March 2026; derived from rounded attendance and destination percentages",
+          "gate": "1",
+          "family_tests_planned": 5,
+          "n_missing": 2
+        },
+        {
+          "outcome": "ma06_college4_grad",
+          "geography": "Statewide",
+          "ses_group": 3,
+          "n_eligible": 135,
+          "n_available": 134,
+          "n_common": 134,
+          "mean": 65.89784029850746,
+          "sd": 12.61113620436241,
+          "minimum": 27.5942,
+          "maximum": 87.8,
+          "outcome_label": "Estimated four-year college attendance among graduates",
+          "family": "destinations",
+          "units": "percentage points",
+          "size_control": "ma_ln912",
+          "population_note": "Class of 2025; March 2026; derived from rounded attendance and destination percentages",
+          "gate": "1",
+          "family_tests_planned": 5,
+          "n_missing": 1
+        }
+      ],
+      "raw_group_differences": [
+        {
+          "group_a": 2,
+          "group_b": 1,
+          "difference_a_minus_b_pp": 22.236069172932332,
+          "inference": "Descriptive difference of equally weighted school means. No pairwise significance test is supplied or implied."
+        },
+        {
+          "group_a": 3,
+          "group_b": 1,
+          "difference_a_minus_b_pp": 44.66216135113904,
+          "inference": "Descriptive difference of equally weighted school means. No pairwise significance test is supplied or implied."
+        },
+        {
+          "group_a": 3,
+          "group_b": 2,
+          "difference_a_minus_b_pp": 22.42609217820671,
+          "inference": "Descriptive difference of equally weighted school means. No pairwise significance test is supplied or implied."
+        }
+      ],
+      "continuous_associations_per_10pp_higher_low_income_share": [
+        {
+          "model": "A_05",
+          "outcome": "ma06_college4_grad",
+          "specification": "adjusted",
+          "geography": "Statewide",
+          "family": "destinations",
+          "vce": "district clustered",
+          "term": "ma_low10",
+          "b": -7.328813016828958,
+          "se": 0.590244855717336,
+          "ci_low": -8.490373380408489,
+          "ci_high": -6.167252653249427,
+          "p": 7.88432589794e-29,
+          "n": 380,
+          "n_clusters": 300.0,
+          "df": 299,
+          "r2": 0.779771506924778,
+          "outcome_label": "Estimated four-year college attendance among graduates",
+          "units": "percentage points",
+          "size_control": "ma_ln912",
+          "population_note": "Class of 2025; March 2026; derived from rounded attendance and destination percentages",
+          "gate": "1",
+          "family_tests_planned": 5,
+          "family_rank": 1,
+          "family_tests": 5,
+          "p_holm_family": 3.94216294897e-28,
+          "global_rank": 3,
+          "global_tests": 33,
+          "p_holm_global": 2.44414102836e-27,
+          "inference_note": "Exploratory outcomes; nominal CIs; Holm uses planned family sizes and 33 outcomes per specification/geography, with skipped tests treated as p=1; associations"
+        },
+        {
+          "model": "I_05",
+          "outcome": "ma06_college4_grad",
+          "specification": "income_adj",
+          "geography": "Statewide",
+          "family": "destinations",
+          "vce": "district clustered",
+          "term": "ma_low10",
+          "b": -6.827180728918945,
+          "se": 0.657401143852286,
+          "ci_low": -8.120899944383567,
+          "ci_high": -5.533461513454324,
+          "p": 8.92232630657e-22,
+          "n": 380,
+          "n_clusters": 300.0,
+          "df": 299,
+          "r2": 0.781705149415085,
+          "outcome_label": "Estimated four-year college attendance among graduates",
+          "units": "percentage points",
+          "size_control": "ma_ln912",
+          "population_note": "Class of 2025; March 2026; derived from rounded attendance and destination percentages",
+          "gate": "1",
+          "family_tests_planned": 5,
+          "family_rank": 1,
+          "family_tests": 5,
+          "p_holm_family": 4.46116315329e-21,
+          "global_rank": 6,
+          "global_tests": 33,
+          "p_holm_global": 2.49825136584e-20,
+          "inference_note": "Exploratory outcomes; nominal CIs; Holm uses planned family sizes and 33 outcomes per specification/geography, with skipped tests treated as p=1; associations"
+        },
+        {
+          "model": "U_05",
+          "outcome": "ma06_college4_grad",
+          "specification": "unadjusted",
+          "geography": "Statewide",
+          "family": "destinations",
+          "vce": "district clustered",
+          "term": "ma_low10",
+          "b": -7.673692042170448,
+          "se": 0.395094456820461,
+          "ci_low": -8.451210145830819,
+          "ci_high": -6.896173938510078,
+          "p": 6.35361440198e-55,
+          "n": 380,
+          "n_clusters": 300.0,
+          "df": 299,
+          "r2": 0.654289528951471,
+          "outcome_label": "Estimated four-year college attendance among graduates",
+          "units": "percentage points",
+          "size_control": "ma_ln912",
+          "population_note": "Class of 2025; March 2026; derived from rounded attendance and destination percentages",
+          "gate": "1",
+          "family_tests_planned": 5,
+          "family_rank": 1,
+          "family_tests": 5,
+          "p_holm_family": 3.17680720099e-54,
+          "global_rank": 7,
+          "global_tests": 33,
+          "p_holm_global": 1.71547588853e-53,
+          "inference_note": "Exploratory outcomes; nominal CIs; Holm uses planned family sizes and 33 outcomes per specification/geography, with skipped tests treated as p=1; associations"
+        }
+      ],
+      "model_note": "Unadjusted/adjusted/income-adjusted models use the same outcome-specific complete-covariate sample. A adds school size, type, English-learner and disability shares; I also adds campus log2 income. For severe absence size is total enrollment; for college attendance size is grades 9-12. Raw means use all outcome-available schools and do not impose the model common-sample restriction."
+    },
+    {
+      "outcome": "att_chronic_abs_20pct",
+      "websiteSchoolField": "severeAbsencePct",
+      "websiteOutcomeValuesField": "att_chronic_abs_20pct",
+      "definition": "2024-25 whole-school students absent at least 20% of membership days; not just seniors.",
+      "raw_statewide_groups": [
+        {
+          "outcome": "att_chronic_abs_20pct",
+          "geography": "Statewide",
+          "ses_group": 1,
+          "n_eligible": 137,
+          "n_available": 137,
+          "n_common": 136,
+          "mean": 28.0941605839416,
+          "sd": 24.22280393258337,
+          "minimum": 0.0,
+          "maximum": 91.7,
+          "outcome_label": "Severe chronic absence: 20% of membership days",
+          "family": "disengagement",
+          "units": "percentage points",
+          "size_control": "ma_lntotal",
+          "population_note": "2024-25 whole-school population; not only seniors",
+          "gate": "1",
+          "family_tests_planned": 2,
+          "n_missing": 0
+        },
+        {
+          "outcome": "att_chronic_abs_20pct",
+          "geography": "Statewide",
+          "ses_group": 2,
+          "n_eligible": 135,
+          "n_available": 135,
+          "n_common": 135,
+          "mean": 7.62074074074074,
+          "sd": 5.35778268205271,
+          "minimum": 0.3,
+          "maximum": 29.4,
+          "outcome_label": "Severe chronic absence: 20% of membership days",
+          "family": "disengagement",
+          "units": "percentage points",
+          "size_control": "ma_lntotal",
+          "population_note": "2024-25 whole-school population; not only seniors",
+          "gate": "1",
+          "family_tests_planned": 2,
+          "n_missing": 0
+        },
+        {
+          "outcome": "att_chronic_abs_20pct",
+          "geography": "Statewide",
+          "ses_group": 3,
+          "n_eligible": 135,
+          "n_available": 135,
+          "n_common": 135,
+          "mean": 3.718518518518518,
+          "sd": 2.195388150673405,
+          "minimum": 0.0,
+          "maximum": 15.4,
+          "outcome_label": "Severe chronic absence: 20% of membership days",
+          "family": "disengagement",
+          "units": "percentage points",
+          "size_control": "ma_lntotal",
+          "population_note": "2024-25 whole-school population; not only seniors",
+          "gate": "1",
+          "family_tests_planned": 2,
+          "n_missing": 0
+        }
+      ],
+      "raw_group_differences": [
+        {
+          "group_a": 2,
+          "group_b": 1,
+          "difference_a_minus_b_pp": -20.473419843200862,
+          "inference": "Descriptive difference of equally weighted school means. No pairwise significance test is supplied or implied."
+        },
+        {
+          "group_a": 3,
+          "group_b": 1,
+          "difference_a_minus_b_pp": -24.375642065423083,
+          "inference": "Descriptive difference of equally weighted school means. No pairwise significance test is supplied or implied."
+        },
+        {
+          "group_a": 3,
+          "group_b": 2,
+          "difference_a_minus_b_pp": -3.9022222222222225,
+          "inference": "Descriptive difference of equally weighted school means. No pairwise significance test is supplied or implied."
+        }
+      ],
+      "continuous_associations_per_10pp_higher_low_income_share": [
+        {
+          "model": "A_20",
+          "outcome": "att_chronic_abs_20pct",
+          "specification": "adjusted",
+          "geography": "Statewide",
+          "family": "disengagement",
+          "vce": "district clustered",
+          "term": "ma_low10",
+          "b": 2.661720727492792,
+          "se": 0.734841061567938,
+          "ci_low": 1.215682778521679,
+          "ci_high": 4.107758676463905,
+          "p": 0.000342399957625,
+          "n": 406,
+          "n_clusters": 304.0,
+          "df": 303,
+          "r2": 0.516369013083405,
+          "outcome_label": "Severe chronic absence: 20% of membership days",
+          "units": "percentage points",
+          "size_control": "ma_lntotal",
+          "population_note": "2024-25 whole-school population; not only seniors",
+          "gate": "1",
+          "family_tests_planned": 2,
+          "family_rank": 1,
+          "family_tests": 2,
+          "p_holm_family": 0.000684799915251,
+          "global_rank": 22,
+          "global_tests": 33,
+          "p_holm_global": 0.004120623151151,
+          "inference_note": "Exploratory outcomes; nominal CIs; Holm uses planned family sizes and 33 outcomes per specification/geography, with skipped tests treated as p=1; associations"
+        },
+        {
+          "model": "I_20",
+          "outcome": "att_chronic_abs_20pct",
+          "specification": "income_adj",
+          "geography": "Statewide",
+          "family": "disengagement",
+          "vce": "district clustered",
+          "term": "ma_low10",
+          "b": 3.262077992411717,
+          "se": 0.962293278767552,
+          "ci_low": 1.368454089348061,
+          "ci_high": 5.155701895475373,
+          "p": 0.000791810595192,
+          "n": 406,
+          "n_clusters": 304.0,
+          "df": 303,
+          "r2": 0.521812717035876,
+          "outcome_label": "Severe chronic absence: 20% of membership days",
+          "units": "percentage points",
+          "size_control": "ma_lntotal",
+          "population_note": "2024-25 whole-school population; not only seniors",
+          "gate": "1",
+          "family_tests_planned": 2,
+          "family_rank": 1,
+          "family_tests": 2,
+          "p_holm_family": 0.001583621190383,
+          "global_rank": 20,
+          "global_tests": 33,
+          "p_holm_global": 0.011085348332684,
+          "inference_note": "Exploratory outcomes; nominal CIs; Holm uses planned family sizes and 33 outcomes per specification/geography, with skipped tests treated as p=1; associations"
+        },
+        {
+          "model": "U_20",
+          "outcome": "att_chronic_abs_20pct",
+          "specification": "unadjusted",
+          "geography": "Statewide",
+          "family": "disengagement",
+          "vce": "district clustered",
+          "term": "ma_low10",
+          "b": 4.42066909871733,
+          "se": 0.374494450094509,
+          "ci_low": 3.683729895346939,
+          "ci_high": 5.157608302087721,
+          "p": 1.03441667056e-26,
+          "n": 406,
+          "n_clusters": 304.0,
+          "df": 303,
+          "r2": 0.39951842378239,
+          "outcome_label": "Severe chronic absence: 20% of membership days",
+          "units": "percentage points",
+          "size_control": "ma_lntotal",
+          "population_note": "2024-25 whole-school population; not only seniors",
+          "gate": "1",
+          "family_tests_planned": 2,
+          "family_rank": 1,
+          "family_tests": 2,
+          "p_holm_family": 2.06883334112e-26,
+          "global_rank": 13,
+          "global_tests": 33,
+          "p_holm_global": 2.17227500818e-25,
+          "inference_note": "Exploratory outcomes; nominal CIs; Holm uses planned family sizes and 33 outcomes per specification/geography, with skipped tests treated as p=1; associations"
+        }
+      ],
+      "model_note": "Unadjusted/adjusted/income-adjusted models use the same outcome-specific complete-covariate sample. A adds school size, type, English-learner and disability shares; I also adds campus log2 income. For severe absence size is total enrollment; for college attendance size is grades 9-12. Raw means use all outcome-available schools and do not impose the model common-sample restriction."
+    }
+  ]
+}

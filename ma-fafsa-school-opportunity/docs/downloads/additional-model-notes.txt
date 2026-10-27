@@ -1,0 +1,150 @@
+Additional models: definitions and interpretation
+Prepared 7 October 2026
+
+Study unit and scope
+
+The school is the observation. The source DTA has 415 records; the unchanged
+eligibility rule retains 407 with positive 2024-25 senior enrollment. This is
+the eligible set in the current merged sample, not a verified census of every
+Massachusetts public school enrolling seniors. Boston means the BPS district,
+excluding charter schools belonging to separate charter districts.
+
+Student low-income share is the main SES measure, entered per 10 percentage
+points. The existing statewide three/four groups stay fixed across outcomes.
+Campus-tract income enters separately in log base 2: its coefficient is per
+doubling of the assigned tract median. It does not measure students' household
+incomes or necessarily their residential neighborhoods. Its ACS vintage and
+geocoding documentation remain unverified.
+
+Statewide standard errors are clustered by district. Boston is one district,
+so Boston models use heteroskedasticity-robust standard errors. The Boston
+income model has two predictors, low-income share and campus income. It is
+not the full statewide adjusted model. All coefficients are associations.
+
+Outcomes and population differences
+
+1. College destinations: four reported sector shares among college attendees.
+   These are not shares of all graduates. Schools with no college attendees
+   cannot contribute to destination-composition regressions. Five eligible
+   schools' four sector shares sum below 100 beyond rounding tolerance. Their
+   reported shares are retained, not normalized. An export identifies them;
+   the reason for the shortfall is not established.
+
+   The additional all-graduate four-year outcome multiplies the overall
+   college attendance percentage by the public-plus-private four-year share,
+   divided by 100. It is approximate because source percentages are rounded.
+   It describes attendance by March 2026 among Class of 2025 graduates.
+
+2. Graduate plans: ten existing category percentages plus any two/four-year
+   college and four-year-college aggregates. The source fields are already
+   percentages; they are not divided by graduate counts again. These are
+   reported intentions of 2024-25 graduates, not observed enrollment.
+
+   Planned minus observed college attendance is a school-level difference.
+   It requires equal positive graduate counts in both reports. Matching counts
+   do not establish matching individual students. The gap cannot identify
+   which students changed plans or prove that FAFSA information caused a gap.
+
+3. Disengagement: the 2025 four-year cohort dropout percentage and 2024-25
+   whole-school severe chronic absence, defined by the source as missing at
+   least 20% of membership days. Absence models use log total enrollment;
+   other statewide models use log enrollment in grades 9-12.
+
+4. MCAS: average scaled scores and meeting/exceeding percentages in ELA,
+   mathematics and science; average growth percentiles in ELA and mathematics.
+   Raw values were corroborated against official Grade 10 reports at Abby
+   Kelley, Mystic Valley, Boston Latin Academy and Abington, including schools
+   serving younger grades. The export omits explicit grade/group filters, and
+   every school was not independently checked. Treat all eight measures as
+   provisional 2025 Grade 10 academic context, not Class of 2025 outcomes.
+   Science uses best Grade 9/10 performance with continuity requirements.
+
+5. SAT: 2024-25 mathematics and reading/writing averages among test takers.
+   Test-taking selection means these do not represent every senior.
+
+6. AP: unique exam-taker count, 2024-25, all subjects/all students. The grade
+   universe is not documented sufficiently to produce a verified participation
+   rate. The linear count model estimates the school-size coefficient rather
+   than imposing an exposure denominator or offset. Its units are students,
+   not percentage points. Count-model linear predictions can be negative and
+   influential large schools require review before prominent use.
+
+7. Pathways: reported count and published percentage, 2025-26, grades 9-12
+   plus special education beyond grade 12 (SP). These describe later program
+   context, not Class of 2025 outcomes. Counts are not verified unique students.
+   The 2024-25 school-size covariate is lagged context, not a current-year
+   denominator. Missing source records remain missing, not zero.
+   Published percentages above 100 are retained/flagged; an additional model
+   excludes those values transparently. No percentage is capped, and the
+   source does not establish whether overlap or another issue explains them.
+
+Multiple testing and overlapping measures
+
+Families were defined before selecting results: destinations, plans,
+intention gap, disengagement, MCAS, SAT, AP and pathways. Holm corrections are
+computed separately for each geography and specification, using the planned
+family size. A stricter global correction uses all 33 planned added outcomes.
+Unestimable constant outcomes are treated as p=1 for these planned counts.
+Confidence intervals are nominal 95% intervals, not simultaneous intervals.
+These additions are exploratory and have been chosen after prior project
+analysis. Multiplicity corrections do not make the extension preregistered.
+
+Compositional shares and derived aggregates overlap. Ten plans shares are not
+ten independent discoveries. Dropout overlaps graduation status, and severe
+absence overlaps the original chronic-absence outcome. Count coefficients,
+score points and percentage-point coefficients cannot be ranked as though
+they were the same outcome scale.
+
+The original six-outcome results and their Holm adjustment are untouched.
+Do not apply their p-values to the new income-adjusted or added models.
+
+FAFSA comparisons and presenting real differences
+
+Keep the screened May 31, 2025 count/enrolled-seniors ratio. Numerator and
+denominator come from different aggregate systems, not matched students.
+Do not change the denominator, impute suppression as zero, alter cutoffs,
+drop schools, or choose controls because a result becomes larger.
+
+The script reports all specified comparisons, including per-10-point low-
+income associations and an interquartile contrast based on fixed percentiles
+of the 407-school low-income distribution. The IQR endpoints are exported.
+The IQR is a predictor contrast, not a difference between group means.
+
+Categorical contrasts report highest-minus-lowest low-income groups statewide,
+or highest-minus-middle in BPS, whose lowest statewide tercile has no schools.
+Negative values mean lower FAFSA completion at the higher-low-income group.
+Full-sample raw contrasts and income-complete raw contrasts are both saved.
+Use the income-complete raw model to assess changes after income adjustment.
+
+The BPS middle tercile has four usable FAFSA schools: the three exam schools
+and Boston Arts Academy. Excluding exam schools leaves only Boston Arts
+Academy in that group. The no-exam sensitivity is therefore not a broad
+comparison of representative middle-income and high-poverty Boston schools.
+
+Changing predictor units can make the displayed coefficient numerically
+larger without changing model fit, t-statistics or evidence. A wider contrast
+changes the substantive question. Report its endpoints, N and confidence
+interval. A strong memo can focus on a documented gap while acknowledging
+that the adjusted FAFSA relationship is uncertain and information access has
+not been directly measured.
+
+Official definition references checked 7 October 2026
+
+DESE student and outcome definitions:
+https://profiles.doe.mass.edu/help/data.aspx?section=students
+
+Example Grade 10 MCAS report and science notes:
+https://profiles.doe.mass.edu/mcas/achievement_level.aspx?fycode=2025&linkid=32&orgcode=00350545&orgtypecode=6
+
+AP participation definition:
+https://profiles.doe.mass.edu/statereport/ap_part.aspx
+
+Pathways/Programs Enrollment by Grade:
+https://profiles.doe.mass.edu/statereport/PathwaysProgramsEnrollmentbyGrade.aspx
+
+ACS five-year period guidance:
+https://www.census.gov/programs-surveys/acs/guidance/estimates.html
+
+Counseling capacity, documented FAFSA assistance and student mobility were
+suggested as useful future explanatory data. They are not present in the
+supplied dataset and cannot be fitted by this package. No proxies are invented.

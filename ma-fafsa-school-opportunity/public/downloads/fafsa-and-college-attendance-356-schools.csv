@@ -1,0 +1,357 @@
+﻿schoolCode,schoolName,district,isBps,fafsaPct,collegeAttendancePct,lowIncomePct,ses3
+00010505,Abington - Abington High,Abington,False,53.90625,61.0,34.5,2
+00050505,Agawam - Agawam High,Agawam,False,62.77056277056276,68.7,37.6,2
+00070505,Amesbury - Amesbury High,Amesbury,False,57.69230769230769,59.4,29.7,2
+00090505,Andover - Andover High,Andover,False,70.52896725440806,78.9,11.8,3
+00100505,Arlington - Arlington High,Arlington,False,70.83333333333334,75.8,10.7,3
+00140505,Ashland - Ashland High,Ashland,False,67.9245283018868,77.1,22.7,3
+00160505,Attleboro - Attleboro High,Attleboro,False,56.66666666666666,59.7,36.5,2
+00160515,Attleboro-Attleboro Community Academy,Attleboro,False,21.73913043478261,6.9,64.1,1
+00170505,Auburn - Auburn Senior High,Auburn,False,72.12121212121212,75.2,26.5,3
+00180510,Avon - Avon Middle High School,Avon,False,63.1578947368421,64.9,46.7,2
+00200505,Barnstable - Barnstable High,Barnstable,False,50.0,55.2,53.0,2
+00230505,Bedford - Bedford High,Bedford,False,69.50672645739911,79.7,11.2,3
+00240505,Belchertown - Belchertown High,Belchertown,False,81.29496402877699,74.1,21.1,3
+00250505,Bellingham - Bellingham High School,Bellingham,False,60.13986013986013,58.0,29.1,2
+00260505,Belmont - Belmont High,Belmont,False,58.52272727272727,73.6,12.3,3
+00300505,Beverly - Beverly High,Beverly,False,65.83629893238434,66.1,32.5,2
+00310505,Billerica - Billerica Memorial High School,Billerica,False,70.98976109215018,71.8,25.4,3
+00350074,Boston - Dearborn 6-12 STEM Academy,Boston,True,64.04494382022472,28.4,83.2,1
+00350426,Boston - Henderson K-12 Inclusion School Upper,Boston,True,57.14285714285714,53.8,81.0,1
+00350505,Boston - Brighton High School,Boston,True,24.05063291139241,19.9,87.9,1
+00350507,Boston - Boston International High School & Newcomers Academy,Boston,True,33.33333333333333,32.4,87.8,1
+00350515,Boston - Charlestown High School,Boston,True,37.77777777777778,21.8,82.5,1
+00350522,Boston - Excel High School,Boston,True,72.72727272727273,27.6,85.7,1
+00350525,Boston - Albert D Holland School of Technology,Boston,True,57.14285714285714,37.8,84.2,1
+00350530,Boston - East Boston High School,Boston,True,39.93174061433447,30.0,75.0,1
+00350535,Boston - English High School,Boston,True,42.03821656050955,27.9,85.4,1
+00350537,Boston - Madison Park Technical Vocational High School,Boston,True,24.41860465116279,23.7,84.1,1
+00350540,Boston - Fenway High School,Boston,True,66.66666666666666,54.4,73.5,1
+00350541,Boston - Another Course To College,Boston,True,72.1311475409836,51.6,79.4,1
+00350542,Boston - New Mission High School,Boston,True,77.5,58.8,68.0,1
+00350543,Boston-Greater Egleston High School,Boston,True,11.9047619047619,12.0,79.5,1
+00350545,Boston - Boston Latin Academy,Boston,True,88.30188679245283,77.7,48.1,2
+00350546,Boston - Boston Arts Academy,Boston,True,73.14814814814815,57.9,59.4,2
+00350548,Boston-Boston Adult Tech Academy,Boston,True,14.03508771929824,13.7,89.0,1
+00350549,Boston - Margarita Muniz Academy,Boston,True,67.10526315789474,40.3,90.0,1
+00350558,Boston - Ruth Batson Academy,Boston,True,44.14414414414414,38.0,86.6,1
+00350560,Boston - Boston Latin School,Boston,True,88.66498740554157,80.1,31.3,2
+00350565,Boston-Quincy Upper School,Boston,True,88.70967741935483,67.7,67.3,1
+00350575,Boston - O'Bryant School of Math & Science,Boston,True,87.12121212121212,68.0,57.3,2
+00350581,Boston - Community Academy of Science and Health,Boston,True,36.89320388349515,33.0,84.7,1
+00350655,Boston - Lyon High School,Boston,True,40.0,33.3,78.9,1
+00350657,Boston - TechBoston Academy,Boston,True,60.28368794326241,45.9,85.6,1
+00350690,Boston - Snowden International High School,Boston,True,72.82608695652173,58.1,79.6,1
+00350755,Boston - Boston Collaborative High School,Boston,True,7.086614173228346,10.8,83.8,1
+00360505,Bourne - Bourne High School,Bourne,False,63.52941176470588,66.7,35.8,2
+00400505,Braintree - Braintree High,Braintree,False,71.26436781609196,75.5,27.8,3
+00440505,Brockton - Brockton High,Brockton,False,35.84474885844749,41.1,70.0,1
+00440520,Brockton-Edison Evening Academy,Brockton,False,5.64516129032258,8.2,66.2,1
+00460505,Brookline - Brookline High,Brookline,False,57.84671532846716,72.9,15.1,3
+00480505,Burlington - Burlington High,Burlington,False,69.23076923076923,70.1,21.3,3
+00490506,Cambridge - Cambridge Rindge and Latin,Cambridge,False,66.66666666666666,60.7,38.3,2
+00500505,Canton - Canton High,Canton,False,72.6457399103139,76.9,23.5,3
+00520405,Carver - Carver Middle/High School,Carver,False,57.44680851063831,57.1,27.5,3
+00560505,Chelmsford - Chelmsford High,Chelmsford,False,71.6374269005848,77.0,15.0,3
+00570505,Chelsea - Chelsea High,Chelsea,False,40.38997214484679,29.9,77.9,1
+00570515,Chelsea-Chelsea Opportunity Academy,Chelsea,False,30.43478260869566,5.1,72.0,1
+00570705,Chelsea-Chelsea Virtual Learning Academy,Chelsea,False,36.36363636363637,16.7,77.8,1
+00610505,Chicopee - Chicopee High,Chicopee,False,41.55251141552511,49.3,70.4,1
+00610510,Chicopee - Chicopee Comprehensive High School,Chicopee,False,44.48398576512456,50.9,51.1,2
+00640505,Clinton - Clinton Senior High,Clinton,False,58.62068965517241,55.2,50.0,2
+00650505,Cohasset - Cohasset High School,Cohasset,False,69.38775510204081,83.8,7.3,3
+00710505,Danvers - Danvers High,Danvers,False,68.44919786096256,69.0,28.6,3
+00720505,Dartmouth - Dartmouth High,Dartmouth,False,66.66666666666666,73.2,29.2,2
+00730505,Dedham - Dedham High,Dedham,False,69.68085106382979,65.1,31.4,2
+00770505,Douglas - Douglas High School,Douglas,False,75.0,65.6,27.0,3
+00790505,Dracut - Dracut Senior High,Dracut,False,61.11111111111111,66.3,34.7,2
+00820505,Duxbury - Duxbury High,Duxbury,False,69.5852534562212,80.2,7.1,3
+00830505,East Bridgewater - East Bridgewater JR./SR. High School,East Bridgewater,False,60.83333333333333,56.4,22.9,3
+00860505,Easthampton - Easthampton High,Easthampton,False,78.72340425531915,76.6,39.8,2
+00870505,East Longmeadow - East Longmeadow High,East Longmeadow,False,65.71428571428571,75.6,25.6,3
+00880505,Easton - Oliver Ames High,Easton,False,75.51724137931033,78.8,18.7,3
+00930505,Everett - Everett High,Everett,False,37.36263736263736,34.6,70.0,1
+00940505,Fairhaven - Fairhaven High,Fairhaven,False,63.76811594202898,68.1,29.9,2
+00950505,Fall River - B M C Durfee High,Fall River,False,45.18900343642612,37.5,72.4,1
+00950525,Fall River-Resiliency Preparatory Academy,Fall River,False,11.62790697674419,12.1,91.2,1
+00960505,Falmouth - Falmouth High,Falmouth,False,65.26315789473685,68.5,35.6,2
+00970505,Fitchburg - Fitchburg High,Fitchburg,False,51.73745173745174,50.8,67.5,1
+00970510,Fitchburg-Goodrich Academy,Fitchburg,False,20.21276595744681,13.4,75.8,1
+00990505,Foxborough - Foxborough High,Foxborough,False,70.1492537313433,72.2,23.2,3
+01000515,Framingham - Framingham High School,Framingham,False,52.56410256410257,49.2,53.2,2
+01010505,Franklin - Franklin High,Franklin,False,78.93401015228426,82.1,13.8,3
+01030505,Gardner - Gardner High,Gardner,False,55.48780487804878,47.6,56.6,2
+01030515,Gardner-Gardner Academy for Learning and Technology,Gardner,False,13.04347826086956,50.0,61.0,1
+01050505,Georgetown - Georgetown High School,Georgetown,False,68.75,60.3,17.2,3
+01070505,Gloucester - Gloucester High,Gloucester,False,47.48603351955308,44.1,45.4,2
+01100505,Grafton - Grafton High School,Grafton,False,68.20276497695853,70.0,19.6,3
+01110505,Granby - Granby Jr Sr High School,Granby,False,64.70588235294117,71.2,34.5,2
+01140505,Greenfield - Greenfield High,Greenfield,False,39.53488372093023,48.8,61.9,1
+01170505,Hadley - Hopkins Academy,Hadley,False,69.04761904761905,71.8,28.1,3
+01220505,Hanover - Hanover High,Hanover,False,75.29411764705883,84.4,10.4,3
+01250505,Harvard - The Bromfield High School,Harvard,False,65.4320987654321,75.0,9.5,3
+01270505,Hatfield - Smith Academy,Hatfield,False,75.0,72.2,14.7,3
+01280505,Haverhill - Haverhill High,Haverhill,False,44.72573839662447,27.7,55.8,2
+01310505,Hingham - Hingham High,Hingham,False,63.49809885931559,85.5,9.2,3
+01330505,Holbrook - Holbrook Middle High School,Holbrook,False,55.00000000000001,67.1,45.4,2
+01360505,Holliston - Holliston High,Holliston,False,73.5,81.0,11.6,3
+01370505,Holyoke - Holyoke High,Holyoke,False,31.2807881773399,45.5,81.5,1
+01380505,Hopedale - Hopedale Jr Sr High,Hopedale,False,67.6923076923077,74.2,21.9,3
+01390505,Hopkinton - Hopkinton High,Hopkinton,False,71.6923076923077,81.6,7.2,3
+01410505,Hudson - Hudson High,Hudson,False,62.2093023255814,63.2,38.1,2
+01420505,Hull - Hull High,Hull,False,60.0,61.3,31.7,2
+01440505,Ipswich - Ipswich High,Ipswich,False,63.47826086956522,76.8,19.0,3
+01490515,Lawrence - Lawrence High School,Lawrence,False,42.87369640787949,21.4,82.1,1
+01500505,Lee - Lee Middle/High School,Lee,False,61.53846153846154,56.9,41.5,2
+01510505,Leicester - Leicester High,Leicester,False,60.91954022988506,65.5,39.7,2
+01520505,Lenox - Lenox Memorial High,Lenox,False,63.1578947368421,83.9,21.0,3
+01530505,Leominster - Leominster High School,Leominster,False,83.92857142857143,63.5,48.2,2
+01530515,Leominster-Leominster Center for Excellence,Leominster,False,26.66666666666667,17.6,67.7,1
+01530605,Leominster - Center For Technical Education Innovation,Leominster,False,10.94890510948905,39.8,50.3,2
+01550505,Lexington - Lexington High,Lexington,False,59.96621621621622,77.8,8.4,3
+01580505,Littleton - Littleton High School,Littleton,False,76.61290322580645,85.2,7.9,3
+01590505,Longmeadow - Longmeadow High,Longmeadow,False,72.60869565217392,82.2,12.2,3
+01600505,Lowell - Lowell High,Lowell,False,42.99876084262701,53.8,68.4,1
+01610505,Ludlow - Ludlow Senior High,Ludlow,False,63.04347826086957,67.0,32.5,2
+01620505,Lunenburg - Lunenburg High,Lunenburg,False,62.5,61.2,21.9,3
+01630505,Lynn - Classical High,Lynn,False,36.328125,35.0,71.1,1
+01630510,Lynn - Lynn English High,Lynn,False,32.85968028419182,32.2,75.3,1
+01630605,Lynn - Lynn Vocational Technical Institute,Lynn,False,46.90909090909091,42.9,68.0,1
+01640505,Lynnfield - Lynnfield High,Lynnfield,False,69.50354609929079,86.1,11.6,3
+01650505,Malden - Malden High,Malden,False,52.7542372881356,49.8,63.7,1
+01670505,Mansfield - Mansfield High,Mansfield,False,71.78423236514523,79.7,18.8,3
+01680505,Marblehead - Marblehead High,Marblehead,False,74.68879668049793,76.3,10.7,3
+01700505,Marlborough - Marlborough High,Marlborough,False,34.82758620689655,33.7,58.3,2
+01710505,Marshfield - Marshfield High,Marshfield,False,73.58490566037736,80.7,16.4,3
+01720505,Mashpee - Mashpee Middle-High School,Mashpee,False,71.02803738317756,75.5,36.2,2
+01740505,Maynard - Maynard High,Maynard,False,75.30864197530865,77.6,23.2,3
+01750505,Medfield - Medfield Senior High,Medfield,False,60.57142857142858,82.8,6.7,3
+01760505,Medford - Medford High,Medford,False,33.94160583941606,56.2,42.2,2
+01770505,Medway - Medway High,Medway,False,73.49397590361446,75.3,14.8,3
+01780505,Melrose - Melrose High,Melrose,False,72.0164609053498,80.1,16.3,3
+01810505,Methuen - Methuen High,Methuen,False,56.18661257606491,40.0,50.5,2
+01820505,Middleborough - Middleborough High,Middleborough,False,66.3157894736842,52.0,35.8,2
+01850505,Milford - Milford High,Milford,False,54.48717948717948,51.9,52.9,2
+01860505,Millbury - Millbury Junior/Senior High,Millbury,False,71.1864406779661,61.3,36.3,2
+01870505,Millis - Millis High School,Millis,False,75.9493670886076,74.4,16.8,3
+01890505,Milton - Milton High,Milton,False,75.47169811320755,78.6,15.1,3
+01910505,Monson - Monson High School,Monson,False,62.96296296296296,68.0,40.4,2
+01970505,Nantucket - Nantucket High,Nantucket,False,58.62068965517241,60.1,28.9,2
+01980505,Natick - Natick High,Natick,False,74.8051948051948,81.8,15.0,3
+01990505,Needham - Needham High,Needham,False,59.02439024390244,85.0,5.8,3
+02010505,New Bedford - New Bedford High,New Bedford,False,30.40238450074516,26.1,78.8,1
+02010515,New Bedford-Whaling City Junior/Senior High School,New Bedford,False,7.352941176470589,5.1,88.0,1
+02040505,Newburyport - Newburyport High,Newburyport,False,67.00507614213198,66.5,12.1,3
+02070505,Newton - Newton North High,Newton,False,56.92599620493358,72.8,15.8,3
+02070510,Newton - Newton South High,Newton,False,55.74468085106383,72.6,11.6,3
+02090505,North Adams - Drury High,North Adams,False,48.71794871794872,50.7,61.6,1
+02100505,Northampton - Northampton High,Northampton,False,72.2943722943723,68.0,24.3,3
+02110505,North Andover - North Andover High,North Andover,False,64.77611940298507,64.8,24.2,3
+02120505,North Attleborough - North Attleboro High,North Attleborough,False,75.25083612040135,73.0,22.4,3
+02140505,Northbridge - Northbridge High,Northbridge,False,59.78260869565217,56.5,36.3,2
+02150505,North Brookfield - North Brookfield High,North Brookfield,False,33.33333333333333,33.3,50.3,2
+02170505,North Reading - North Reading High,North Reading,False,68.51851851851852,75.5,11.8,3
+02180505,Norton - Norton High,Norton,False,70.0,66.5,22.9,3
+02190505,Norwell - Norwell High,Norwell,False,66.66666666666666,84.6,6.7,3
+02200505,Norwood - Norwood High,Norwood,False,58.13008130081301,60.1,40.0,2
+02260505,Oxford - Oxford High,Oxford,False,50.48543689320388,54.7,46.1,2
+02270505,Palmer - Palmer High,Palmer,False,44.87179487179488,39.5,54.8,2
+02290510,Peabody - Peabody Veterans Memorial High,Peabody,False,58.89967637540453,58.9,46.1,2
+02310505,Pembroke - Pembroke High School,Pembroke,False,71.6867469879518,78.2,17.4,3
+02360505,Pittsfield - Pittsfield High,Pittsfield,False,59.62732919254658,64.5,58.6,2
+02360510,Pittsfield - Taconic High,Pittsfield,False,52.0,53.4,61.9,1
+02390505,Plymouth - Plymouth North High,Plymouth,False,62.76276276276276,62.7,31.2,2
+02390515,Plymouth - Plymouth South High,Plymouth,False,62.29508196721311,57.7,23.8,3
+02430505,Quincy - Quincy High,Quincy,False,59.79899497487438,54.4,55.2,2
+02430510,Quincy - North Quincy High,Quincy,False,76.775956284153,71.7,40.1,2
+02440505,Randolph - Randolph High,Randolph,False,67.33333333333333,51.6,64.1,1
+02460505,Reading - Reading Memorial High,Reading,False,76.15384615384615,81.4,12.1,3
+02480505,Revere - Revere High,Revere,False,56.70995670995671,30.2,64.3,1
+02480520,Revere-CityLab Innovation High School,Revere,False,71.42857142857143,9.1,63.2,1
+02510505,Rockland - Rockland Senior High,Rockland,False,56.91056910569105,55.4,44.9,2
+02520510,Rockport - Rockport Middle High,Rockport,False,74.4186046511628,73.2,26.4,3
+02580505,Salem - Salem High,Salem,False,47.41784037558686,38.5,61.7,1
+02580510,Salem-New Liberty Innovation School,Salem,False,61.53846153846154,26.7,63.9,1
+02610505,Sandwich - Sandwich Middle High School,Sandwich,False,72.79411764705883,82.7,19.3,3
+02620505,Saugus - Saugus High,Saugus,False,57.37704918032787,59.2,49.6,2
+02640505,Scituate - Scituate High School,Scituate,False,70.58823529411765,79.7,12.6,3
+02650505,Seekonk - Seekonk High,Seekonk,False,73.33333333333333,69.1,16.0,3
+02660505,Sharon - Sharon High,Sharon,False,68.53146853146853,79.6,13.4,3
+02710505,Shrewsbury - Shrewsbury High School,Shrewsbury,False,70.76566125290023,76.5,16.2,3
+02740505,Somerville - Somerville High,Somerville,False,57.54985754985755,49.9,52.7,2
+02770515,Southbridge - Southbridge High School,Southbridge,False,27.08333333333333,25.3,77.6,1
+02780505,South Hadley - South Hadley High,South Hadley,False,58.91472868217055,68.5,31.5,2
+02810205,Springfield - The Springfield Renaissance School an Expeditionary Learning School,Springfield,False,83.78378378378379,71.2,75.9,1
+02810320,Springfield - John J Duggan Academy,Springfield,False,78.46153846153847,47.9,72.5,1
+02810475,Springfield - Conservatory of the Arts,Springfield,False,78.94736842105263,33.3,80.7,1
+02810500,Springfield - Springfield Central High,Springfield,False,77.73019271948608,37.7,79.5,1
+02810510,Springfield - High School Of Commerce,Springfield,False,22.80701754385965,33.6,83.1,1
+02810530,Springfield - Springfield High School of Science and Technology,Springfield,False,82.18390804597702,27.5,86.4,1
+02810620,Springfield - Roger L. Putnam Vocational Technical Academy,Springfield,False,62.18749999999999,43.2,73.2,1
+02810705,Springfield - The Springfield Virtual School,Springfield,False,63.63636363636363,15.2,86.0,1
+02840505,Stoneham - Stoneham High,Stoneham,False,75.0,75.9,25.4,3
+02850505,Stoughton - Stoughton High,Stoughton,False,58.99280575539569,63.7,44.2,2
+02900510,Sutton - Sutton High School,Sutton,False,61.05263157894737,68.8,18.3,3
+02910505,Swampscott - Swampscott High,Swampscott,False,69.64285714285714,77.4,24.2,3
+02920505,Swansea - Joseph Case High,Swansea,False,58.87096774193549,66.1,24.7,3
+02930505,Taunton - Taunton High,Taunton,False,51.74418604651163,55.4,54.3,2
+02930705,Taunton-Taunton Public Virtual Academy (TPVA),Taunton,False,38.46153846153847,23.5,81.0,1
+02950505,Tewksbury - Tewksbury Memorial High,Tewksbury,False,80.34682080924856,82.1,19.7,3
+03010505,Tyngsborough - Tyngsborough High School,Tyngsborough,False,70.40816326530613,78.6,19.0,3
+03040505,Uxbridge - Uxbridge High,Uxbridge,False,77.67857142857143,65.5,25.9,3
+03050505,Wakefield - Wakefield Memorial High,Wakefield,False,73.30097087378641,74.0,16.9,3
+03070505,Walpole - Walpole High,Walpole,False,71.91489361702128,79.8,15.0,3
+03080505,Waltham - Waltham Sr High,Waltham,False,50.68181818181819,48.8,51.5,2
+03090505,Ware - Ware Junior/Senior High School,Ware,False,46.05263157894737,38.5,56.0,2
+03100505,Wareham - Wareham Senior High,Wareham,False,58.44155844155844,43.8,63.4,1
+03140505,Watertown - Watertown High,Watertown,False,59.0,60.0,43.5,2
+03150505,Wayland - Wayland High School,Wayland,False,65.89861751152074,82.2,8.3,3
+03160505,Webster - Bartlett High School,Webster,False,50.0,46.4,69.1,1
+03170505,Wellesley - Wellesley Sr High,Wellesley,False,45.59270516717325,79.9,8.6,3
+03210505,Westborough - Westborough High,Westborough,False,66.97247706422019,83.0,16.1,3
+03220505,West Boylston - West Boylston Junior/Senior High,West Boylston,False,69.23076923076923,64.2,31.2,2
+03230505,West Bridgewater - West Bridgewater Junior/Senior,West Bridgewater,False,63.91752577319587,67.0,23.6,3
+03250505,Westfield - Westfield High,Westfield,False,57.45454545454546,63.0,46.6,2
+03250605,Westfield-Westfield Technical Academy,Westfield,False,36.76470588235294,35.1,39.9,2
+03260505,Westford - Westford Academy,Westford,False,77.3841961852861,87.5,6.7,3
+03300505,Weston - Weston High,Weston,False,37.8698224852071,79.9,8.7,3
+03310515,Westport - Westport Middle-High School,Westport,False,52.74725274725275,59.3,33.6,2
+03320505,West Springfield - West Springfield High,West Springfield,False,57.95053003533569,58.4,53.0,2
+03350505,Westwood - Westwood High,Westwood,False,68.11594202898551,85.9,8.2,3
+03360505,Weymouth - Weymouth High School,Weymouth,False,56.73076923076923,56.0,37.6,2
+03420505,Wilmington - Wilmington High,Wilmington,False,73.75886524822694,74.5,14.9,3
+03430515,Winchendon - Murdock High School,Winchendon,False,44.82758620689656,42.3,52.3,2
+03440505,Winchester - Winchester High School,Winchester,False,58.99053627760252,82.3,7.3,3
+03460505,Winthrop - Winthrop High School,Winthrop,False,62.16216216216216,62.9,35.0,2
+03470505,Woburn - Woburn High,Woburn,False,59.30232558139535,65.5,40.2,2
+03480285,Worcester - University Pk Campus School,Worcester,False,71.42857142857143,57.1,80.3,1
+03480350,Worcester - Claremont Academy,Worcester,False,51.80722891566265,34.8,84.2,1
+03480503,Worcester - Burncoat Senior High,Worcester,False,47.65625,30.7,68.1,1
+03480512,Worcester - Doherty Memorial High,Worcester,False,64.35331230283911,51.1,59.8,1
+03480515,Worcester - North High,Worcester,False,44.0,31.8,80.7,1
+03480520,Worcester - South High Community,Worcester,False,47.72234273318873,36.2,70.8,1
+03480605,Worcester - Worcester Technical High,Worcester,False,59.67302452316077,57.6,67.1,1
+04060705,Northampton-Smith Vocational Agricultural - Smith Vocational and Agricultural High,Northampton-Smith Vocational Agricultural,False,32.16783216783217,24.3,36.8,2
+04100205,Excel Academy Charter (District) - Excel Academy Charter School,Excel Academy Charter (District),False,84.71337579617835,56.8,63.4,1
+04110305,Boston Green Academy Horace Mann Charter School (District) - Boston Green Academy Horace Mann Charter School,Boston Green Academy Horace Mann Charter School (District),False,51.78571428571429,47.2,80.5,1
+04120530,Academy Of the Pacific Rim Charter Public (District) - Academy Of the Pacific Rim Charter Public School,Academy Of the Pacific Rim Charter Public (District),False,86.66666666666667,51.2,63.5,1
+04130505,Four Rivers Charter Public (District) - Four Rivers Charter Public School,Four Rivers Charter Public (District),False,67.64705882352942,61.8,32.9,2
+04140305,Berkshire Arts and Technology Charter Public (District) - Berkshire Arts and Technology Charter Public School,Berkshire Arts and Technology Charter Public (District),False,64.28571428571429,66.7,56.3,2
+04160305,Boston Preparatory Charter Public (District) - Boston Preparatory Charter Public School,Boston Preparatory Charter Public (District),False,88.75,73.7,65.3,1
+04240505,Boston Day and Evening Academy Charter (District)-Boston Day and Evening Academy Charter School,Boston Day and Evening Academy Charter (District),False,8.4,19.2,78.6,1
+04280305,Brooke Charter School (District) - Brooke Charter School,Brooke Charter School (District),False,81.1881188118812,77.6,61.2,1
+04290010,KIPP Academy Lynn Charter (District) - KIPP Academy Lynn Charter School,KIPP Academy Lynn Charter (District),False,95.16129032258064,75.8,64.7,1
+04300305,Advanced Math and Science Academy Charter (District) - Advanced Math and Science Academy Charter School,Advanced Math and Science Academy Charter (District),False,80.31496062992126,84.0,17.9,3
+04350305,Innovation Academy Charter (District) - Innovation Academy Charter School,Innovation Academy Charter (District),False,67.36842105263158,77.4,31.0,2
+04360305,Community Charter School of Cambridge (District) - Community Charter School of Cambridge,Community Charter School of Cambridge (District),False,86.11111111111111,67.6,56.2,2
+04380505,Codman Academy Charter Public (District) - Codman Academy Charter Public School,Codman Academy Charter Public (District),False,74.28571428571429,54.5,80.5,1
+04440205,Neighborhood House Charter (District) - Neighborhood House Charter School,Neighborhood House Charter (District),False,66.66666666666666,61.4,63.9,1
+04450105,Abby Kelley Foster Charter Public (District)-Abby Kelley Foster Charter Public School,Abby Kelley Foster Charter Public (District),False,84.21052631578947,78.9,57.9,2
+04460550,Foxborough Regional Charter (District) - Foxborough Regional Charter School,Foxborough Regional Charter (District),False,72.09302325581395,71.4,47.2,2
+04490305,Boston Collegiate Charter (District) - Boston Collegiate Charter School,Boston Collegiate Charter (District),False,76.82926829268293,73.1,41.8,2
+04680505,Ma Academy for Math and Science - Ma Academy for Math and Science School,Ma Academy for Math and Science,False,77.55102040816327,87.8,5.1,3
+04690505,Match Charter Public School (District) - Match Charter Public School,Match Charter Public School (District),False,92.72727272727272,63.0,70.6,1
+04700105,Mystic Valley Regional Charter (District)-Mystic Valley Regional Charter School,Mystic Valley Regional Charter (District),False,91.78082191780824,84.9,30.6,2
+04740505,Sizer School: A North Central Charter Essential (District) - Sizer School: A North Central Charter Essential School,Sizer School: A North Central Charter Essential (District),False,35.13513513513514,55.6,52.5,2
+04780505,Francis W. Parker Charter Essential (District) - Francis W. Parker Charter Essential School,Francis W. Parker Charter Essential (District),False,87.5,71.4,12.9,3
+04790505,Pioneer Valley Performing Arts Charter Public (District) - Pioneer Valley Performing Arts Charter Public School,Pioneer Valley Performing Arts Charter Public (District),False,65.15151515151516,61.5,38.3,2
+04830305,Rising Tide Charter Public (District) - Rising Tide Charter Public School,Rising Tide Charter Public (District),False,74.07407407407408,67.9,26.1,3
+04840505,Roxbury Preparatory Charter (District) - Roxbury Preparatory Charter School,Roxbury Preparatory Charter (District),False,83.65384615384616,61.8,77.9,1
+04850485,Salem Academy Charter (District) - Salem Academy Charter School,Salem Academy Charter (District),False,94.02985074626866,72.3,54.2,2
+04870550,Prospect Hill Academy Charter (District) - Prospect Hill Academy Charter School,Prospect Hill Academy Charter (District),False,85.24590163934425,80.7,57.3,2
+04880550,South Shore Charter Public (District) - South Shore Charter Public School,South Shore Charter Public (District),False,75.32467532467533,59.2,34.7,2
+04910550,Atlantis Charter (District) - Atlantis Charter School,Atlantis Charter (District),False,36.70886075949367,52.6,58.3,2
+04940205,Pioneer Charter School of Science (District) - Pioneer Charter School of Science,Pioneer Charter School of Science (District),False,88.67924528301887,67.9,47.3,2
+04960305,Global Learning Charter Public (District) - Global Learning Charter Public School,Global Learning Charter Public (District),False,64.1025641025641,45.9,72.0,1
+04970205,Pioneer Valley Chinese Immersion Charter (District) - Pioneer Valley Chinese Immersion Charter School,Pioneer Valley Chinese Immersion Charter (District),False,71.42857142857143,76.5,17.6,3
+04990305,Hampden Charter School of Science (District) - Hampden Charter School of Science,Hampden Charter School of Science (District),False,75.67567567567568,71.2,57.6,2
+06000505,Acton-Boxborough - Acton-Boxborough Regional High,Acton-Boxborough,False,68.42105263157895,83.2,10.9,3
+06030505,Hoosac Valley Regional - Hoosac Valley High School,Hoosac Valley Regional,False,57.77777777777777,46.7,54.7,2
+06050505,Amherst-Pelham - Amherst Regional High,Amherst-Pelham,False,69.84126984126983,64.9,31.1,2
+06100505,Ashburnham-Westminster - Oakmont Regional High School,Ashburnham-Westminster,False,72.36842105263158,73.3,23.2,3
+06150505,Athol-Royalston - Athol High,Athol-Royalston,False,47.22222222222222,39.0,57.8,2
+06160505,Ayer Shirley School District - Ayer Shirley Regional High School,Ayer Shirley School District,False,68.64406779661016,70.7,28.5,3
+06180505,Berkshire Hills - Monument Mt Regional High,Berkshire Hills,False,47.40740740740741,52.7,41.8,2
+06200505,Berlin-Boylston - Tahanto Regional High,Berlin-Boylston,False,81.35593220338984,78.0,15.3,3
+06220505,Blackstone-Millville - Blackstone Millville RHS,Blackstone-Millville,False,47.77777777777778,41.3,35.2,2
+06250505,Bridgewater-Raynham - Bridgewater-Raynham Regional,Bridgewater-Raynham,False,64.73551637279597,67.3,29.5,2
+06350505,Central Berkshire - Wahconah Regional High,Central Berkshire,False,67.52136752136752,64.9,36.0,2
+06400505,Concord-Carlisle - Concord Carlisle High,Concord-Carlisle,False,54.98392282958199,75.3,9.4,3
+06450505,Dennis-Yarmouth - Dennis-Yarmouth Regional High,Dennis-Yarmouth,False,60.65573770491803,65.5,52.3,2
+06500505,Dighton-Rehoboth - Dighton-Rehoboth Regional High School,Dighton-Rehoboth,False,59.76331360946746,71.9,20.9,3
+06550505,Dover-Sherborn - Dover-Sherborn Regional High,Dover-Sherborn,False,49.34210526315789,77.8,5.9,3
+06580505,Dudley-Charlton Reg - Shepherd Hill Regional High,Dudley-Charlton Reg,False,61.25654450261781,63.3,33.1,2
+06600505,Nauset - Nauset Regional High,Nauset,False,73.39901477832512,77.0,27.4,3
+06650505,Freetown-Lakeville - Apponequet Regional High,Freetown-Lakeville,False,62.94117647058823,72.8,19.8,3
+06700505,Frontier - Frontier Regional,Frontier,False,65.21739130434783,68.9,21.6,3
+06720505,Gateway - Gateway Regional School,Gateway,False,55.17241379310344,26.7,43.2,2
+06730505,Groton-Dunstable - Groton Dunstable Regional,Groton-Dunstable,False,75.15151515151514,87.4,9.9,3
+06740505,Gill-Montague - Turners Fall High,Gill-Montague,False,38.29787234042553,30.2,59.8,1
+06750505,Hamilton-Wenham - Hamilton-Wenham Regional High,Hamilton-Wenham,False,64.81481481481481,79.6,8.7,3
+06800505,Hampden-Wilbraham - Minnechaug Regional High,Hampden-Wilbraham,False,69.29460580912863,74.4,25.3,3
+06830505,Hampshire - Hampshire Regional High,Hampshire,False,68.36734693877551,72.9,19.9,3
+06900505,King Philip - King Philip Regional High,King Philip,False,65.80882352941177,74.3,17.2,3
+06950505,Lincoln-Sudbury - Lincoln-Sudbury Regional High,Lincoln-Sudbury,False,68.40731070496084,84.0,9.1,3
+06980510,Manchester Essex Regional - Manchester Essex Regional High School,Manchester Essex Regional,False,58.92857142857143,78.4,14.3,3
+07000505,Martha's Vineyard - Martha's Vineyard Regional High,Martha's Vineyard,False,65.81632653061224,56.7,35.8,2
+07050505,Masconomet - Masconomet Regional High School,Masconomet,False,69.76744186046511,77.0,8.5,3
+07100510,Mendon-Upton - Nipmuc Regional High,Mendon-Upton,False,76.0,76.8,15.9,3
+07120515,Monomoy Regional School District - Monomoy Regional High School,Monomoy Regional School District,False,68.15286624203821,76.5,35.4,2
+07150505,Mount Greylock - Mt Greylock Regional High,Mount Greylock,False,79.41176470588235,75.4,20.6,3
+07170505,Mohawk Trail - Mohawk Trail Regional School,Mohawk Trail,False,67.64705882352942,59.5,44.9,2
+07200505,Narragansett - Narragansett Regional High,Narragansett,False,57.14285714285714,61.6,34.8,2
+07250505,Nashoba - Nashoba Regional,Nashoba,False,74.24242424242425,77.9,12.4,3
+07300505,Northboro-Southboro - Algonquin Regional High,Northboro-Southboro,False,63.60544217687075,81.4,12.2,3
+07350505,North Middlesex - North Middlesex Regional,North Middlesex,False,63.81909547738693,70.7,23.5,3
+07400505,Old Rochester - Old Rochester Regional High,Old Rochester,False,73.02631578947368,74.0,21.5,3
+07450505,Pentucket - Pentucket Regional Sr High,Pentucket,False,66.22516556291392,60.4,16.4,3
+07500505,Pioneer Valley - Pioneer Valley Regional,Pioneer Valley,False,66.66666666666666,77.8,30.1,2
+07530505,Quabbin - Quabbin Regional High School,Quabbin,False,57.4074074074074,65.4,31.7,2
+07550505,Ralph C Mahar - Ralph C Mahar Regional,Ralph C Mahar,False,46.875,50.7,58.5,2
+07600505,Silver Lake - Silver Lake Regional High,Silver Lake,False,67.45098039215686,74.0,22.2,3
+07630505,Somerset Berkley Regional School District - Somerset Berkley Regional High School,Somerset Berkley Regional School District,False,63.55140186915887,66.5,26.3,3
+07650505,Southern Berkshire - Mt Everett Regional,Southern Berkshire,False,71.05263157894737,67.6,38.1,2
+07660505,Southwick-Tolland-Granville Regional School District - Southwick Regional School,Southwick-Tolland-Granville Regional School District,False,65.88235294117646,72.8,32.3,2
+07670505,Spencer-E Brookfield - David Prouty High,Spencer-E Brookfield,False,47.45762711864407,48.3,47.1,2
+07700505,Tantasqua - Tantasqua Regional Sr High,Tantasqua,False,76.10062893081762,73.7,23.4,3
+07700605,Tantasqua - Tantasqua Regional Vocational,Tantasqua,False,21.25984251968504,36.1,29.5,2
+07730505,Triton - Triton Regional High School,Triton,False,67.13286713286713,60.4,27.0,3
+07750505,Wachusett - Wachusett Regional High,Wachusett,False,72.09302325581395,79.4,16.0,3
+07780505,Quaboag Regional - Quaboag Regional High,Quaboag Regional,False,53.33333333333334,52.6,41.3,2
+07800505,Whitman-Hanson - Whitman Hanson Regional,Whitman-Hanson,False,61.88679245283019,68.3,29.2,2
+08010605,Assabet Valley Regional Vocational Technical - Assabet Valley Vocational High School,Assabet Valley Regional Vocational Technical,False,39.48339483394834,39.5,44.1,2
+08050605,Blackstone Valley Regional Vocational Technical - Blackstone Valley,Blackstone Valley Regional Vocational Technical,False,62.53968253968254,62.7,18.3,3
+08060605,Blue Hills Regional Vocational Technical - Blue Hills Regional Vocational Technical,Blue Hills Regional Vocational Technical,False,62.5,62.8,35.3,2
+08100605,Bristol-Plymouth Regional Vocational Technical - Bristol-Plymouth Vocational Technical,Bristol-Plymouth Regional Vocational Technical,False,44.55128205128205,42.1,27.0,3
+08150605,Cape Cod Regional Vocational Technical - Cape Cod Region Vocational Technical,Cape Cod Regional Vocational Technical,False,50.625,49.7,35.3,2
+08170505,Essex North Shore Agricultural and Technical School District - Essex North Shore Agricultural and Technical School,Essex North Shore Agricultural and Technical School District,False,64.9164677804296,60.4,24.9,3
+08180605,Franklin County Regional Vocational Technical - Franklin County Technical,Franklin County Regional Vocational Technical,False,27.56410256410257,31.3,39.5,2
+08210605,Greater Fall River Regional Vocational Technical - Diman Regional Vocational Technical High,Greater Fall River Regional Vocational Technical,False,50.42253521126761,50.9,43.5,2
+08230605,Greater Lawrence Regional Vocational Technical-Gr Lawrence Regional Vocational Technical,Greater Lawrence Regional Vocational Technical,False,50.11709601873536,35.6,63.0,1
+08250605,Greater New Bedford Regional Vocational Technical - Gr New Bedford Vocational Technical,Greater New Bedford Regional Vocational Technical,False,50.09823182711198,50.5,50.3,2
+08280605,Greater Lowell Regional Vocational Technical - Gr Lowell Regional Vocational Technical,Greater Lowell Regional Vocational Technical,False,43.7609841827768,46.2,44.3,2
+08290605,South Middlesex Regional Vocational Technical - Joseph P Keefe Technical High School,South Middlesex Regional Vocational Technical,False,43.56435643564357,41.1,52.0,2
+08300605,Minuteman Regional Vocational Technical - Minuteman Regional High,Minuteman Regional Vocational Technical,False,58.52272727272727,59.5,20.8,3
+08320605,Montachusett Regional Vocational Technical - Montachusett Regional Vocational Technical,Montachusett Regional Vocational Technical,False,50.72463768115942,49.1,27.7,3
+08510605,Northern Berkshire Regional Vocational Technical - Charles McCann Vocational Technical,Northern Berkshire Regional Vocational Technical,False,33.33333333333333,37.9,40.5,2
+08520605,Nashoba Valley Regional Vocational Technical - Nashoba Valley Technical High School,Nashoba Valley Regional Vocational Technical,False,35.71428571428572,42.4,30.1,2
+08530605,Northeast Metropolitan Regional Vocational Technical - Northeast Metro Regional Vocational,Northeast Metropolitan Regional Vocational Technical,False,42.40506329113924,37.3,49.5,2
+08550605,Old Colony Regional Vocational Technical - Old Colony Regional Vocational Technical,Old Colony Regional Vocational Technical,False,51.90839694656488,52.7,21.1,3
+08600605,Pathfinder Regional Vocational Technical - Pathfinder Vocational Technical,Pathfinder Regional Vocational Technical,False,28.27586206896552,27.3,39.1,2
+08710605,Shawsheen Valley Regional Vocational Technical-Shawsheen Valley Vocational Technical High School,Shawsheen Valley Regional Vocational Technical,False,43.7888198757764,48.1,24.6,3
+08720605,Southeastern Regional Vocational Technical - Southeastern Regional Vocational Technical,Southeastern Regional Vocational Technical,False,58.13953488372093,51.9,43.2,2
+08730605,South Shore Regional Vocational Technical - South Shore Vocational Technical High,South Shore Regional Vocational Technical,False,33.54037267080746,41.0,27.0,3
+08760605,Southern Worcester County Regional Vocational School District - Bay Path Regional Vocational Technical High School,Southern Worcester County Regional Vocational School District,False,48.6013986013986,47.0,31.7,2
+08780605,Tri-County Regional Vocational Technical - Tri-County Regional Vocational Technical,Tri-County Regional Vocational Technical,False,46.42857142857143,41.2,24.3,3
+08790605,Upper Cape Cod Regional Vocational Technical - Upper Cape Cod Vocational Technical,Upper Cape Cod Regional Vocational Technical,False,36.81318681318682,38.7,37.9,2
+08850605,Whittier Regional Vocational Technical - Whittier Regional Vocational,Whittier Regional Vocational Technical,False,39.48220064724919,24.8,36.5,2
+09100705,Bristol County Agricultural - Bristol County Agricultural High,Bristol County Agricultural,False,57.99999999999999,56.1,27.9,3
+09150705,Norfolk County Agricultural-Norfolk County Agricultural,Norfolk County Agricultural,False,68.4931506849315,64.8,21.9,3
+35020405,Baystate Academy Charter Public School (District) - Baystate Academy Charter Public School,Baystate Academy Charter Public School (District),False,85.0,66.7,83.5,1
+35030205,Collegiate Charter School of Lowell (District) - Collegiate Charter School of Lowell,Collegiate Charter School of Lowell (District),False,62.0,60.4,63.0,1
+35060505,Pioneer Charter School of Science II (District) - Pioneer Charter School of Science II,Pioneer Charter School of Science II (District),False,90.69767441860463,81.4,42.7,2
+35090305,Argosy Collegiate Charter School (District)-Argosy Collegiate Charter School,Argosy Collegiate Charter School (District),False,70.0,57.1,70.9,1
+35130305,New Heights Charter School of Brockton (District)-New Heights Charter School of Brockton,New Heights Charter School of Brockton (District),False,79.43925233644859,81.0,52.5,2
+35140305,Libertas Academy Charter School (District) - Libertas Academy Charter School,Libertas Academy Charter School (District),False,74.57627118644068,52.6,84.7,1
+35170505,Map Academy Charter School (District)-Map Academy Charter School,Map Academy Charter School (District),False,11.9047619047619,15.3,63.5,1
+39010900,Greater Commonwealth Virtual District - Greater Commonwealth Virtual School,Greater Commonwealth Virtual District,False,37.85714285714285,41.0,59.5,2

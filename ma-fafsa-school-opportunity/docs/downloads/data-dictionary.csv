@@ -1,0 +1,20 @@
+field,label,units,source,note
+schoolCode,DESE school code,8-character identifier,03_school_data.csv:school_code,Leading zeroes are preserved.
+name,School name,text,03_school_data.csv:school_name,Original source display name.
+isBps,Boston Public Schools district,boolean,03_school_data.csv:ma_bps,Charters in separate districts are not included solely because they are located in Boston.
+eligible,Eligible school,boolean,03_school_data.csv:ma_primary,Positive matched 2024-25 grade-12 enrollment in the existing merged sample.
+lowIncomePct,Student low-income share,percent,03_school_data.csv:sel_low_income_pct,2024-25 whole-school share; primary SES measure.
+ses3,Low-income-share tercile,"1, 2 or 3",03_school_data.csv:ma_ses3,"1 = higher, 2 = middle, 3 = lower share. Fixed across all outcomes from 407 eligible schools."
+ses4,Low-income-share quartile,"1, 2, 3 or 4",03_school_data.csv:ma_ses4,1 = highest and 4 = lowest share. Fixed statewide groups.
+fafsaPct,Screened school FAFSA estimate,percent,03_school_data.csv:ma_fafsa,"2025-26 aid cycle completions through May 31, 2025 / October 2024 grade-12 enrollment. Historical May 2026 FSA release. Not roster matched."
+fafsaStatus,FAFSA availability status,category,"03_school_data.csv:ma_fafsa_senior_usable,ma_fafsa_multirow,ma_fafsa_over100,fafsa_suppressed",Missing and suppressed are never zero; over100 ratios and unresolved multiple records are excluded from usable estimates.
+grade12Enrollment,Enrolled seniors,students,03_school_data.csv:grade12_enrollment,October 2024 school grade-12 count; different from four-year graduation cohort.
+collegeAttendancePct,College attendance,percent of graduates,03_school_data.csv:college_attend_pct,Class of 2025 attendance by March 2026.
+fourYearCollegePct,Estimated four-year college attendance,percent of graduates,DTA:college_attend_pct*(college_priv_4yr_pct+college_pub_4yr_pct)/100,Exact Stage 06 derivation from rounded source rates; Class of 2025 by March 2026.
+severeAbsencePct,Severe chronic absence,percent,DTA:att_chronic_abs_20pct,2024-25 whole-school students missing at least 20% of membership days.
+chronicAbsencePct,Chronic absence,percent,03_school_data.csv:att_chronic_abs_10pct,2024-25 whole-school students missing at least 10% of membership days.
+graduationPct,Four-year graduation,percent,03_school_data.csv:grad_pct,"2025 four-year graduation cohort, not current enrolled seniors."
+massCorePct,MassCore completion,percent of graduates,03_school_data.csv:masscore_completed_pct,2024-25 graduates.
+apExamScore3To5Pct,AP exams scoring 3-5,percent of exams,03_school_data.csv:ap_perf_pct_score_3_5,"2024-25 exams, not percentage of students; students can take multiple exams."
+campusIncome,Campus-tract median household income,US dollars,03_school_data.csv:acs_median_hh_income,Exploratory campus context. ACS vintage/geocoding are unverified. Multicampus values average tract medians. Not student household income.
+outcomeValues,Additional school outcomes,See outcome definition,Original DTA plus exact Stage 06 derived formulas and source gates,"33 outcomes; population, units and restrictions differ. Null indicates unavailable under the source gate."
