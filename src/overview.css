@@ -4,3 +4,5 @@
 
 .memo-links{display:flex;flex-wrap:wrap;gap:24px;align-items:center}
 .home-action-note a{text-decoration:underline;text-underline-offset:3px}
+
+.home-hero .home-fafsa-definition{font-size:15px;line-height:1.6;max-width:650px;margin:0 0 18px;color:#dce3e5}.home-fafsa-definition a{text-decoration:underline;text-underline-offset:3px}
