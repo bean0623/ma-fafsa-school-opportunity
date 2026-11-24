@@ -1,0 +1,82 @@
+/* Progressive enhancement: without the controller, all content is visible. */
+@media (prefers-reduced-motion: no-preference) {
+  .motion-enabled .motion-reveal {
+    transition: opacity 650ms ease, transform 800ms cubic-bezier(.2,.7,.2,1), filter 650ms ease;
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+
+  .motion-enabled .motion-reveal:not(.motion-visible) {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+    filter: blur(3px);
+  }
+
+  .motion-enabled .motion-reveal.motion-data {
+    filter: none;
+  }
+
+  .motion-enabled .motion-reveal.motion-visible {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+
+  .motion-enabled .home-hero .hero-art {
+    transform: translate3d(0, var(--hero-shift, 0px), 0);
+    opacity: var(--hero-visibility, 1);
+    filter: blur(var(--hero-softness, 0px));
+  }
+
+  .motion-enabled .button {
+    transition: background-color 220ms ease, border-color 220ms ease, box-shadow 220ms ease, transform 220ms ease;
+  }
+
+  .download-row, .source-row, .beyond-resource {
+    transition: background-color 240ms ease, border-color 240ms ease, translate 240ms ease;
+  }
+
+  .segmented button, .table-toggle > summary, .contents a {
+    transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .motion-enabled .button:hover { transform: translateY(-2px); box-shadow: 0 6px 18px #102b4114; }
+    .download-row:hover, .source-row:hover, .beyond-resource:hover {
+      translate: 3px 0;
+      background-color: #102b4105;
+    }
+  }
+}
+
+/* Keyboard users never have to wait for an entrance animation. */
+.motion-enabled .motion-reveal:focus-within,
+.motion-enabled .motion-reveal:target {
+  opacity: 1;
+  transform: none;
+  filter: none;
+  transition: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-reveal, .home-hero .hero-art {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    transition: none !important;
+  }
+  .button, .download-row, .source-row, .beyond-resource, .segmented button,
+  .table-toggle > summary, .contents a, .site-header nav a::after {
+    transition: none !important;
+    transform: none !important;
+    translate: none !important;
+  }
+}
+
+@media print {
+  .motion-reveal, .home-hero .hero-art {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    transition: none !important;
+  }
+}
